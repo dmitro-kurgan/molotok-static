@@ -1,0 +1,88 @@
+extends ./templates/base
+
+block title
+	title Company
+
+block main
+	include ./templates/header 
+	section.breadcrumb
+		.container_content
+			ul.clearfix
+				li
+					a(href='./') Главная
+				li
+					a(href='company.html') О компании
+	.content.content--company
+		.container_content
+			section.buy-online
+				.row
+					.col-sm-6
+						.buy-online_left
+							.buy-online_img(style='background-image:url(' + require('./components/images/company-photo-1.jpg') + ')')
+					.col-sm-6
+						.buy-online_right
+							h1 Покупайте онлайн на «Molotok»
+							p.
+								Компания «Феникс Центр» успешно функционирует на рынке стройматериалов. И этому способствует грамотно поставленная цель — с помощью интернет-магазина www.fenixcentr.com.ua упростить задачу клиентам в покупке необходимых им строительных материалов. Удобное размещение складов играет здесь не последнюю роль. Самый первый и ставший впоследствии основным склад находится на Московском проспекте. Склад на Холодной горе был открыт в 2014 году весной и мгновенно завоевал популярность потребителей.
+
+							h5 Наши привилегии:
+							ul
+								li Morbi cursus;
+								li Phasellus eu ligula
+								li Lorem ipsum
+								li Quisque eros tellus
+								li Nunc est ante
+								li Phasellus eu
+			section.code-faq
+				.row
+					.col-sm-6
+						.code-faq_left
+							h2 Наши принципы
+							p.
+								Что касается принципов работы компании, то, несомненно, на первом месте любимая многими поговорка «Не откладывай на завтра то, что может быть сделано сегодня». Работникам компании «Феникс Ценр» удаётся воплощать этот принцип в действие, поскольку профессионализм планирования и ответственная реализация задуманного являются нашими сильнейшими сторонами.
+							p.
+								Мы считаем, что намного более высокий результат достижим, если вовремя использовать благоприятные возможности, а не полагаться на «авось» и затем решать возникшие проблемы. Очень важными этапами являются и обязательное планирование деятельности для оценки результативности, и контроль за этой результативностью.
+							a(href="#").btn.turq-btn Связаться с нами
+					.col-sm-6
+						.code-faq_right
+							h2 Часто задаваемые вопросы
+							#accordion.panel-group
+								.panel.panel-default
+									.panel-heading
+										h4.panel-title
+											a(data-toggle='collapse', data-parent='#accordion', href='#collapse1', aria-expanded="true").
+												Как я могу проверить, есть ли товар на складе?
+									#collapse1.panel-collapse.collapse.in
+										.panel-body
+											p.
+												Пожалуйста, позвоните в наши магазины для получения актуальной информации по любому предмету. Вы также можете отправитьсообщение на нашу веб-страницу по адресу molotok@gmail.com
+								.panel.panel-default
+									.panel-heading
+										h4.panel-title
+											a(data-toggle='collapse', data-parent='#accordion', href='#collapse2', aria-expanded="false").
+												Как я могу проверить, есть ли товар на складе?
+									#collapse2.panel-collapse.collapse
+										.panel-body
+											p.
+												Пожалуйста, позвоните в наши магазины для получения актуальной информации по любому предмету. Вы также можете отправитьсообщение на нашу веб-страницу по адресу molotok@gmail.com
+								.panel.panel-default
+									.panel-heading
+										h4.panel-title
+											a(data-toggle='collapse', data-parent='#accordion', href='#collapse3', aria-expanded="false").
+												Как я могу проверить, есть ли товар на складе?
+									#collapse3.panel-collapse.collapse
+										.panel-body
+											p.
+												Пожалуйста, позвоните в наши магазины для получения актуальной информации по любому предмету. Вы также можете отправитьсообщение на нашу веб-страницу по адресу molotok@gmail.com
+								.panel.panel-default
+									.panel-heading
+										h4.panel-title
+											a(data-toggle='collapse', data-parent='#accordion', href='#collapse4', aria-expanded="false").
+												Как я могу проверить, есть ли товар на складе?
+									#collapse4.panel-collapse.collapse
+										.panel-body
+											p.
+												Пожалуйста, позвоните в наши магазины для получения актуальной информации по любому предмету. Вы также можете отправитьсообщение на нашу веб-страницу по адресу molotok@gmail.com
+	include ./templates/footer
+	include ./templates/buy-oneclick
+	include ./templates/success

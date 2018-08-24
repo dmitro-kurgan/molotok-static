@@ -1,0 +1,118 @@
+.orders {
+	padding-bottom: 110px;
+	&_top {
+		margin-bottom: 15px;
+	}
+	&_block {
+		border: 2px solid #f6f6f6;
+		padding: 30px 40px;
+		margin-bottom: 15px;
+		@media #{$mobile} {
+			padding: 0px;
+			border: none;
+		}
+		&_img {
+			border: 1px solid #f7f7f7;
+			background-color: #f7f7f7;
+		}
+	}
+	.back-wrapper {
+		text-align: left;
+		margin-bottom: 20px;
+	}
+	.back {
+		font-size: 16px;
+		color: $turq;
+		text-decoration: underline;
+	}
+	.order, .status {
+		font-size: 19px;
+		font-weight: 700;
+		color: #373737;
+		span {
+			color: $turq;
+		}
+	}
+	.order {
+		float: left;
+	}
+	.status {
+		float: right;
+		@media #{$mobile} {
+			margin-top: 10px;
+			text-align: left;
+			width: 100%;
+			display: block;
+		}
+	}
+	.table {
+		text-transform: uppercase;
+		border: none;
+		thead {
+			color: #626262;
+			font-size: 14px;
+			font-weight: 700;
+			background-color: #f6f6f6;
+		}
+		tbody {
+			color: #555555;
+			font-size: 15px;
+			img {
+				width: 112px;
+				height: 112px;
+				float: left;
+				@media #{$mobile} {
+					width: 80px;
+					height: 80px;
+				}
+			}
+			span {
+				margin-left: 15px;
+				width: 200px;
+				@media #{$mobile} {
+
+				}
+			}
+			td {
+				padding-left: 0px;
+				vertical-align: middle;
+				div {
+					display: flex;
+					align-items: center;
+					text-align: left;
+				}
+			}
+			tr {
+				td {
+					padding: 20px 0 10px 0;
+				}
+				td + td{
+					color: #5d5d5d;
+					font-size: 18px;
+					font-weight: 700;
+					@media #{$tablet} {
+						font-size: 16px;
+					}
+				}
+			}
+			tr + tr {
+				td {
+					padding: 10px 0;
+				}	
+			}
+		}
+		td {
+			border: none;
+			width: 25%;
+		}
+	}
+	.total {
+		color: #373737;
+		font-size: 19px;
+		font-weight: 700;
+		text-align: right;
+		span {
+			color: $turq;
+		}
+	}
+}

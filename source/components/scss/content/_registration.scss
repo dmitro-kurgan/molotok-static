@@ -1,0 +1,72 @@
+.reg {
+	&_block {
+		text-align: left;
+		border: 2px solid #f6f6f6;
+		padding: 50px;
+		margin-bottom: 70px;
+		@media #{$mobile} {
+			border: none;
+			padding: 0px;
+		}
+		h3, h4 {
+			margin-bottom: 25px;
+		}
+		.form-group {
+			label {
+				color: #373737;
+				font-size: 15px;
+				font-weight: 700;
+				margin-bottom: 10px;
+				position: relative;
+				&:after {
+					content: '*';
+					position: absolute;
+					right: -10px;
+					top: 0px;
+					color: #00c3c5;
+					font-size: 15px;
+				}
+			}	
+		}
+		.btn-blk {
+			text-align: right;
+		}
+		.back-btn, .create-btn {
+			font-size: 17px;
+			display: inline-block;
+			padding: 12px 0;
+		}
+		.back-btn {
+			width: 94px;
+			height: 47px;
+			margin-right: 10px;
+			@media #{$mobile} {
+				width: 100%;
+				margin-right: 0px;
+				margin-bottom: 20px;
+			}
+		}
+		.create-btn {
+			width: 241px;
+			height: 47px;
+			@media #{$mobile} {
+				width: 100%;
+			}
+		}
+	}
+	&_personal {
+		.form-group {
+			&:nth-child(2) {
+				margin-bottom: 50px;
+			}
+		}
+	}
+	&_filling{
+		.form-group {
+			margin-bottom: 30px;
+			&:nth-child(3) {
+				margin-bottom: 50px;
+			}
+		}
+	}
+}

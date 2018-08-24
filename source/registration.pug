@@ -1,0 +1,43 @@
+extends ./templates/base
+
+block title
+	title Registration
+block main
+	include ./templates/header
+	section.breadcrumb
+		.container_content
+			ul.clearfix
+				li
+					a(href='./') Главная
+				li
+					a(href='enter.html') Регистрация
+	.content.content--registration
+		.container_content
+				section.reg
+					h2 Личный кабинет
+					.reg_block
+						.reg_personal
+							h3 Персональные данные
+							form
+								.form-group
+									input.form-control#name(type='name', placeholder='Имя', required)
+								.form-group
+									input.form-control#surname(type='surname', placeholder='Фамилия', required)
+						.reg_filling
+							h4 Заполните поля
+							form
+								.form-group
+									label(for='email') EMAIL
+									input.form-control#email(type='email', required)
+								.form-group
+									label(for='pwd') ПАРОЛЬ
+									input.form-control#pwd(type='password', required)
+								.form-group
+									label(for='pwdCheck') ПОВТОРИТЕ ПАРОЛЬ
+									input.form-control#pwdCheck(type='password', required)
+								.btn-blk
+									a.btn.turq-btn.back-btn(href="", onclick='javascript:history.back(); return false;') Назад
+									a.btn.turq-btn.create-btn(href="#") Создать аккаунт
+	include ./templates/footer
+	include ./templates/buy-oneclick
+	include ./templates/success

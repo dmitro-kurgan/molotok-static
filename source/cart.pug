@@ -1,0 +1,148 @@
+extends ./templates/base
+
+block title
+	title Product page
+
+block main
+	include ./templates/header 
+	section.breadcrumb
+		.container_content
+			ul.clearfix
+				li
+					a(href='./') Главная
+				li
+					a(href='cart.html') Корзина
+	.content.content--cart-pg
+		.container_content
+			section.cart-pg
+				h2 Корзина
+				.cart-pg_block
+					.row
+						.col-md-6
+							.cart-pg_left
+								table
+									thead
+										tr
+											th Продукт
+											th Количество
+											th Стоимость
+									tbody
+										tr
+											td
+												.cart-pg_left_img
+													img(src=require("./components/images/pic-2.png"), alt="")
+												.cart-pg_left_name 
+													p Название продукта 
+											td
+												.cart-pg_left_quantity
+													span.plus +
+													input.input(value='1', type='')
+													span.minus -
+											td
+												.cart-pg_left_cost
+													p 60.00 грн
+												a(href="#").cart-pg_left_del
+													span.close
+										tr
+											td
+												.cart-pg_left_img
+													img(src=require("./components/images/pic-2.png"), alt="")
+												.cart-pg_left_name 
+													p Название продукта 2
+											td
+												.cart-pg_left_quantity
+													span.plus +
+													input.input(value='1', type='')
+													span.minus -
+											td
+												.cart-pg_left_cost
+													p 60.00 грн
+												a(href="#").cart-pg_left_del
+													span.close
+								form
+									.form-group
+										label(for='sale') Введите номер скидочного купона:
+										input.form-control#sale(type='text', name='sale', required)
+									button(type='submit').btn.turq-btn Применить
+								.cart-pg_left_total
+									p Итоговая стоимость:
+									span 120.00 грн
+						.col-md-6
+							.cart-pg_right
+								.cart-pg_right_block
+									form
+										.cart-pg_right_address
+											h3 Адрес доставки
+											.row
+												.form-group.col-sm-6
+													label(for='name') Ваше имя
+													input.form-control#name(type='text', name='name', required)
+												.form-group.col-sm-6
+													label(for='email') E-mail
+													input.form-control#email(type='text', name='email', required)
+												.form-group.col-sm-6
+													label(for='country') Ваша страна
+													//- input.form-control#country(type='text', name='country', required)
+													select.selectpicker.custom-picker(title='', required)
+														option Украина
+														option Россия
+														option Беларусь
+														option Казахстан
+												.form-group.col-sm-6
+													label(for='district') Область
+													input.form-control#district(type='text', name='district', required)
+												.form-group.col-sm-6
+													label(for='city') Ваш город
+													input.form-control#city(type='text', name='city', required)
+												.form-group.col-sm-6
+													label(for='mail') Почтовый индекс
+													input.form-control#mail(type='text', name='mail', required)
+												.form-group.col-xs-12
+													label(for='address') Адрес:
+													input.form-control#address(type='text', name='address', required)
+										.cart-pg_right_type
+											.cart-pg_right_delivery
+												h3 Выберите способ доставки
+												.radio
+													label(for='radio')
+														input(type='radio', name='radiodel', checked)#radio
+														.radio-circle
+														| Самовывоз
+												.radio
+													label(for='radio2')
+														input(type='radio', name='radiodel')#radio2
+														.radio-circle
+														| Доставка по адресу
+											.cart-pg_right_pay
+												h3 Выберите способ оплаты
+												.radio
+													label(for='radio3')
+														input(type='radio', name='radiopay', checked)#radio3
+														.radio-circle
+														| Карта Visa, Mastercard
+												.description
+													p.
+														После нажатия кнопки «Продолжить» вам откроется страница платежной системы, для оплаты заказа
+												.radio
+													label(for='radio4')
+														input(type='radio', name='radiopay')#radio4
+														.radio-circle
+														| Наложенный платеж (при доставке почтой Укрины)
+												.radio
+													label(for='radio5')
+														input(type='radio', name='radiopay')#radio5
+														.radio-circle
+														| Оплата курьеру
+												.radio
+													label(for='radio6')
+														input(type='radio', name='radiopay')#radio6
+														.radio-circle
+														| Yandex деньги
+										.cart-pg_right_bottom
+											.cart-pg_right_total
+												p Итого к оплате:
+												span 120.00 грн
+											button(type='submit').btn.turq-btn Оформить заказ
+	include ./templates/footer
+	include ./templates/buy-oneclick
+	include ./templates/success

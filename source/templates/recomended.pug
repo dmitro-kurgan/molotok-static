@@ -1,0 +1,40 @@
+section.recomended
+	h2 С этим также покупают
+	.slider.slick-recomended
+		mixin recomended(sticker, stickername, pic, name, text, price, saleclass, saleprice)
+			div
+				a(href="#").slick-recomended_box
+					.slick-recomended_box_main
+						.slick-recomended_box_top
+							div(class='' + sticker)= stickername
+						.slick-recomended_box_img(style='background-image: url(' + require('./components/images/' + pic) + ')')
+					.slick-recomended_box_bottom
+						.slick-recomended_box_name
+							p= name
+						.slick-recomended_box_price
+							p(class='slick-recomended_box_cost')= price
+							p(class='' + saleclass)= saleprice	
+						.slick-recomended_box_text.tip
+							p= text
+				.slick-recomended_panel.clearfix
+					ul
+						li
+							span
+								a(href="#")
+								.description
+									p В сравнение
+						li
+							span
+								a(href="#")
+								.description.one-click
+									p Купить в один клик
+						li
+							a(href="#") купить
+		+recomended('','','1-br-aquamast.jpg','AQUAMAST МАСТИКА БИТУМНО-РЕЗИНОВАЯ (10КГ)', 'Холодная гидроизоляционная мастика на основе битума и дробленой резины. Для устройства кровельного покрытия.', '359 грн', '', '')
+		+recomended('sticker sticker-new','New','Evroruberojd-HKP-768x1024.png','ОРЕОЛ-1 ЕВРОРУБЕРОИД ХПП 2,0 (15М2)', 'Битумно-полимерный материал для гидроизоляции класса Эконом. Для нижнего слоя мягкой кровли и гидроизоляции зданий', '380 грн.', 'buy-it_box_sale', '410 грн')
+		+recomended('','','P25_L.jpg','ПОЛИМИН П-24 ЭЛАСТ-КЛЕЙ 25КГ', 'ПОЛИМИН П-24 эласт-клей  (для балконов и полов с электро и водным обогревом)', '259 грн', '', '')
+		+recomended('','','1-osb-qsbosb-12-mm-1250-2500-krono-ukraina.jpg','OSB (ХАРЬКОВ) 2500*1250*10ММ', 'Ориентированно-стружечная плита (ОСП) — это многослойный (3-4 слоя) лист из древесной стружки, склеенной различными смолами с добавлением синтетического воска и борной кислоты.', '300 грн', '', '')
+		+recomended('sticker sticker-new','New','ode.jpg','УТЕПЛИТЕЛЬ ODE ФОЛЬГИРОВАННЫЙ 50*1200*1000 12М2', 'Тепло- звукоизоляционный материал минерального происхождения Knauf Insulation 18м2', '475 грн', '', '')
+		+recomended('sticker sticker-new','New','Stark_deltashlif_FS_110.png','ДЕЛЬТАШЛИФМАШИНА ВИБРАЦИОННАЯ STARK FS 110', 'Дельташлифмашина для шлифования древесины, пластмассы, металла, композиционных материалов. Может применяться для полировки поверхности мебели, если использовать мягкую ткань вместо наждачной бумаги.', '537 грн', 'buy-it_box_sale', '581 грн')
+		+recomended('','','Elektrodrel-ID500new.png','ДРЕЛЬ БЕЗУДАРНАЯ STARK ID 500', 'Электродрель, предназначенная для сверления отверстий в древесине, металле и бетоне. Может использоваться как шуруповерт для завинчивания шурупов и нарезания резьбы.', '726 грн', 'buy-it_box_sale', '785.00 грн')
+		+recomended('sticker sticker-new','New','1-mira3100-150x150.jpg','КЛЕЙ ДЛЯ ПЛИТКИ ЭЛАСТИЧНЫЙ MIRA 3100 UNIFIХ (СЕРЫЙ) 25 КГ', 'Клей для плитки Mira 3100 standardfix для облицовки керамической плиткой стен и полов внутри и снаружи помещений. Высокая степень адгезии', '260 грн', '', '')

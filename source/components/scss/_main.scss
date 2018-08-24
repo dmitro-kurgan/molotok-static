@@ -1,0 +1,145 @@
+body {
+	color: #676767;
+	font-family: $MainFont;
+	font-size: 24px;
+	font-style: normal;
+	font-weight: 400;
+	min-width: 320px;
+	// color: #000;
+}
+.btn {
+	// font: 700 normal 14px $Arimo;
+	// text-transform: uppercase;
+	// width: 140px;
+	// height: 50px;
+	color: $main_color;
+	border: none;
+	border-radius: 0px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	// margin: auto;
+	transition: $main_transition;
+	&:hover,&:focus, &:active {
+		color: $main_color;
+		box-shadow: none;
+	}
+}
+.main-btn {
+	background-color: transparent;
+	text-transform: uppercase;
+	color: #7e7e7e;
+	font-weight: 700;
+	font-size: 16px;
+	border: 1px solid #676767;
+	width: 131px;
+	height: 45px;
+	&:hover {
+		color: #7e7e7e;
+	}
+}
+.sticker {
+	width: 48px;
+	height: 27px;
+	font-weight: 700;
+	font-size: 14px;
+	background-color: #0099f0;
+	color: $main_color;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.sticker-new {
+	background-color: #0099f0;
+}
+.sticker-sale {
+	background-color: #00c1c3;
+}
+.blue-btn {
+	width: 48px;
+	height: 27px;
+	background-color: #0099f0;
+	color: $main_color;
+}
+.turq-btn {
+	background-color: #00c1c3;
+	width: 97px;
+	height: 32px;
+	font-weight: 700;
+	font-size: 16px;
+}
+a {
+	color: inherit;
+	&:hover, &:focus {
+		text-decoration: none;
+		color: inherit;
+		outline: none;
+	}
+}
+.text-overflow {
+	overflow: hidden;
+	text-overflow:ellipsis;
+	white-space: nowrap;
+}
+section {
+	text-align: center;
+	h2 {
+		font-size: 32px;
+		font-weight: 700;
+		color: #424242;
+		@media #{$mobile} {
+			font-size: 28px;
+		}
+	}
+}
+.container {
+	&_content {
+		padding-right: 15px;
+		padding-left: 15px;
+		margin-right: auto;
+		margin-left: auto;
+		@media (min-width: 768px) {
+		    width: 750px;
+		}
+		@media (min-width: 992px) {
+			width: 970px;
+		}
+		@media (min-width: 1200px) {
+		    width: 1170px;
+		}
+	}
+}
+
+.breadcrumb {	
+	background-color: #f7f7f7;
+	border-top: 1px solid #ebebeb;
+	margin-bottom: 60px;
+	text-align: left;
+	padding: 25px 0px;
+	ul {
+		li {
+			// display: inline;
+			float: left;
+			text-transform: uppercase;
+			font-weight: 700;
+			font-size: 13px;
+			margin-right: 4px;
+			&:last-child {
+				margin-right: 0px;
+			}
+    		a {
+				text-decoration: none;
+				color: #2c2c2c;
+				transition: $main_transition;
+				&:hover {
+					color: $turq;
+				}
+    		}
+		}
+		li+li {
+			&:before {
+				content: "/\00a0";
+			}
+		}
+	}
+}

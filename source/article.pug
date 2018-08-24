@@ -1,0 +1,87 @@
+extends ./templates/base
+block title
+	title Article
+block main
+	include ./templates/header 
+	section.breadcrumb
+		.container_content
+			ul.clearfix
+				li
+					a(href='./') Главная
+				li
+					a(href='blog.html') Блог
+				li
+					a(href='article.html') Статья
+	.content.content--article
+		.container_content
+			section.article
+				h2 Статья
+				.article_block.clearfix
+					.article_img(style='background-image: url(' + require('./components/images/news-photo-6.jpg') + ')')
+					h3.article_name Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+					h4.article_data December 07, 2017
+					p.
+						Sed ut perspiciatis unde omnis iste natus sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem.Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut.
+					p.
+						There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.
+					.article_list.clearfix
+						ul
+							li Sed ut perspiciatis unde omnis iste natus sit voluptatem accusantium
+							li Sed ut perspiciatis unde omnis iste natus sit voluptatem accusantium
+							li Sed ut perspiciatis unde omnis iste natus sit voluptatem accusantium
+							li Sed ut perspiciatis unde omnis iste natus sit voluptatem accusantium
+						ul
+							li Sed ut perspiciatis unde omnis iste natus sit voluptatem accusantium
+							li Sed ut perspiciatis unde omnis iste natus sit voluptatem accusantium
+							li Sed ut perspiciatis unde omnis iste natus sit voluptatem accusantium
+							li Sed ut perspiciatis unde omnis iste natus sit voluptatem accusantium
+					.article_bottom.clearfix
+						.article_bottom_left
+							.article_img(style='background-image:url(' + require('./components/images/news-photo-3.jpg') + ')')
+						.article_bottom_right
+							h5 Nemo enim ipsam voluptatem
+							p All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate
+							p Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
+							p Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of
+			section.article-also
+				h2 Читайте также:
+				.row
+					.col-sm-4
+						a(href="article.html").article-also_box
+							.article-also_box_img(style='background-image:url(' + require('./components/images/news-photo-1.jpg') + ')')
+							.article-also_box_data.clearfix
+								.day 18
+								span
+									.month december 2017
+									p Lorem ipsum dolor sit
+							p.article-also_box_text.
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus commodo pellentesque tincidunt. Pellentesque at consectetur.
+							object(data="", type="")
+								a(href="#").read-more Read more
+					.col-sm-4
+						a(href="article.html").article-also_box
+							.article-also_box_img(style='background-image:url(' + require('./components/images/news-photo-2.jpg') + ')')
+							.article-also_box_data.clearfix
+								.day 18
+								span
+									.month december 2017
+									p Lorem ipsum dolor sit
+							p.article-also_box_text.
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus commodo pellentesque tincidunt. Pellentesque at consectetur.
+							object(data="", type="")
+								a(href="#").read-more Read more
+					.col-sm-4
+						a(href="article.html").article-also_box
+							.article-also_box_img(style='background-image:url(' + require('./components/images/news-photo-3.jpg') + ')')
+							.article-also_box_data.clearfix
+								.day 18
+								span
+									.month december 2017
+									p Lorem ipsum dolor sit
+							p.article-also_box_text.
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus commodo pellentesque tincidunt. Pellentesque at consectetur.
+							object(data="", type="")
+								a(href="#").read-more Read more	
+	include ./templates/footer
+	include ./templates/buy-oneclick
+	include ./templates/success

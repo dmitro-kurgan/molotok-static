@@ -1,0 +1,87 @@
+.account, .reg {
+	h2 {
+		font-size: 24px;
+		color: #373737;
+		text-align: left;
+		margin-bottom: 25px;
+	}
+	&_block {
+		text-align: left;
+		border: 2px solid #f6f6f6;
+		padding: 50px;
+		margin-bottom: 65px;
+		@media #{$mobile} {
+			padding: 0px;
+			border: none;
+			max-width: 500px;
+			margin: auto auto 65px auto;
+		}
+		h3, h4 {
+			color: #373737;
+			font-size: 19px;
+			font-weight: 700;
+		}
+		p {
+			color: #afafaf;
+			font-size: 16px;
+			line-height: 1.25;
+		}
+		form {
+			.form-control {
+				// background-color: #f6f6f6;
+				background-color: #edebeb;
+				border: none;
+				border-radius: 0px;
+				// box-shadow: none;
+				// box-shadow: inset 0px 1px 8px 1px #e9e4e4;
+				box-shadow: inset 0px 1px 8px 1px #cbc6c6;
+				height: 45px;
+				@include addPrefixPlaceholder(placeholder, color, #8c8c8c);
+				@include addPrefixPlaceholder(placeholder, font-size, 16px);
+			}
+		}
+	}
+	&_left {
+		p {
+			margin: 20px 0 15px 0;
+		}
+		form {
+			.form-group {
+				&:nth-child(2) {
+					margin-bottom: 10px;
+				}
+			}
+			.forgot {
+				color: #a7a7a7;
+				font-size: 16px;
+				text-decoration: underline;
+				float: left;
+			}
+			.btn {
+				margin-top: 5px;
+				float: right;
+				width: 115px;
+				height: 47px;
+				font-size: 16px;
+			}
+		}
+	}
+	&_right {
+		margin-left: 25px;
+		@media #{$mobile} {
+			margin-left: 0px;
+			margin-top: 25px;
+		}
+		p {
+			margin: 5px 0 15px 0;
+		}
+		.btn {
+			width: 244px;
+			height: 47px;
+			border: 2px solid $turq;
+			color: $turq;
+			font-size: 16px;
+
+		}
+	}
+}

@@ -1,0 +1,112 @@
+extends ./templates/base
+
+block title
+	title Compare
+
+block main
+	include ./templates/header 
+	section.breadcrumb
+		.container_content
+			ul.clearfix
+				li
+					a(href='./') Главная
+				li
+					a(href='compare.html') Сравнение товара
+	.content.content--compare
+		.container_content
+			section.compare
+				h2 Сравнение товара
+				.compare_block.table-responsive.clearfix
+					ul.compare_tr
+						li.compare_td
+							p.compare_category.compare_title
+								| Продукт
+						li.compare_td
+							a(href="#").compare_dismiss
+								.close
+							.compare_img
+								img(src=require("./components/images/pic-2.png"), alt="")
+							.compare_name Product name here
+						li.compare_td
+							a(href="#").compare_dismiss
+								.close
+							.compare_img
+								img(src=require("./components/images/pic-2.png"), alt="")
+							.compare_name Product name here
+						li.compare_td
+							a(href="#").compare_dismiss
+								.close
+							.compare_img
+								img(src=require("./components/images/pic-2.png"), alt="")
+							.compare_name Product name here
+					ul.compare_tr
+						li.compare_td
+							p.compare_category
+								| Цена
+						li.compare_td
+							span
+								p.compare_price 60.00 грн
+								p.compare_price-old 60.00 грн
+						li.compare_td
+							span
+								p.compare_price 60.00 грн
+						li.compare_td
+							span
+								p.compare_price 60.00 грн
+					ul.compare_tr
+						li.compare_td
+							p.compare_category
+								| Производитель
+						li.compare_td
+							p.compare_production Технониколь
+						li.compare_td
+							p.compare_production Технониколь
+						li.compare_td
+							p.compare_production Технониколь
+					ul.compare_tr
+						li.compare_td
+							p.compare_category
+								| Характеристика
+						li.compare_td
+							p.compare_char.
+								Lorem ipsum dolor sit amet, consecteturadipiscing elit. lectus, aliquam ac massa ut, bibendum elementum tortor.
+						li.compare_td
+							p.compare_char.
+								Lorem ipsum dolor sit amet, consecteturadipiscing elit. lectus, aliquam ac massa ut, bibendum elementum tortor.
+						li.compare_td
+							p.compare_char.
+								Lorem ipsum dolor sit amet, consecteturadipiscing elit. lectus, aliquam ac massa ut, bibendum elementum tortor.
+					ul.compare_tr
+						li.compare_td
+							p.compare_category
+								| Вес
+						li.compare_td
+							p.compare_weight.
+								25.00 кг
+						li.compare_td
+							p.compare_weight.
+								25.00 кг
+						li.compare_td
+							p.compare_weight.
+								25.00 кг
+					ul.compare_tr
+						li.compare_td
+							p.compare_category
+								| В корзину
+						li.compare_td
+							.compare_cart
+								a(href="#")
+									span.fa.fa-shopping-cart
+						li.compare_td
+							.compare_cart
+								a(href="#")
+									span.fa.fa-shopping-cart
+						li.compare_td
+							.compare_cart
+								a(href="#")
+									span.fa.fa-shopping-cart
+			include ./templates/recomended
+			include ./templates/viewed
+	include ./templates/footer
+	include ./templates/buy-oneclick
+	include ./templates/success

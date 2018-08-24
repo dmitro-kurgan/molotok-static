@@ -1,0 +1,252 @@
+.modal {
+  text-align: center;
+}
+
+.modal {
+	&:before {
+		display: inline-block;
+		vertical-align: middle;
+		content: " ";
+		height: 100%;
+	}
+}
+
+.modal-dialog {
+  display: inline-block;
+  text-align: left;
+  vertical-align: middle;
+}
+#BuyModal {
+	.modal-dialog {
+		max-width: 500px;
+		.modal-header {
+			padding: 15px 25px;
+			.close {
+				position: absolute;
+				right: 20px;
+				top: 20px;
+				width: 22px;
+				height: 22px;
+				opacity: 1;
+				outline: none;
+				@media #{$mobile} {
+					right: 10px;
+					top: 15px;
+				}
+				&:before, &:after {
+					position: absolute;
+					top: 0px;
+					left: 10px;
+					content: ' ';
+					height: 22px;
+					width: 2px;
+					background-color: #474747;
+				}
+				&:before {
+					transform: rotate(45deg);
+				}
+				&:after {
+					transform: rotate(-45deg);
+				}
+			}
+		}
+		.modal-title {
+			color: #373737;
+			font-weight: 700;
+			font-size: 21px;
+		}
+		.modal-content {
+			border-radius: 0px;
+		}
+		.modal-body {
+			padding: 20px 25px 15px 25px;
+			&_top {
+
+			}
+			&_img, &_quantity {
+				float: left;
+			}
+			&_img {
+				width: 390px;
+				min-height: 225px;
+			    line-height: 225px;
+			    text-align: center;
+				background-color: #f7f7f7;
+				img {
+					vertical-align: middle;
+					width: 100%;
+				}
+			}
+			&_quantity {
+				float: right;
+				width: 50px;
+				span, input {
+					height: 75px;
+					width: 100%;
+					text-align: center;
+					background-color: #f6f6f6;
+					font-size: 17px;
+					color: #525252;
+					font-weight: 700;
+				}
+				span {
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					cursor: pointer;
+					transition: $main_transition;
+					&:hover {
+						color: $main_color;
+						background-color: $turq;
+					}
+				}
+				input {
+					border: none;
+				}
+			}
+			&_name {
+				display: inline-block;
+				margin-top: 15px;
+				color: #373737;
+				font-size: 20px;
+				font-weight: 700;
+			}
+			&_cost {
+				margin-top: 5px;
+				color: #757575;
+				font-size: 17px;
+			}
+			&_bottom {
+				padding-top: 40px;
+				h6 {
+					color: #373737;
+					font-weight: 700;
+					font-size: 21px;
+				}
+			}
+		}
+		.modal-footer {
+			padding: 15px 25px;
+			form {
+				max-width: 640px;
+				@media #{$desctop-md} {
+					max-width: 500px;
+				}
+				@media #{$desctop} {
+					max-width: 425px;
+				}
+				label {
+					color: #373737;
+					font-size: 15px;
+					font-weight: 700;
+					margin-bottom: 10px;
+					float: left;
+				}
+				textarea {
+					margin-bottom: 20px;
+					resize: none;
+				}
+				input {
+					height: 40px;
+				}
+				.form-control {
+					border-radius: 0px;
+					box-shadow: none;
+					border: 1px solid #d0d0d0;
+					@include addPrefixPlaceholder(placeholder, font, 400 normal 16px $MainFont);
+					@include addPrefixPlaceholder(placeholder, color, $main_color);
+					&:focus {
+						border: 1px solid #373737;
+						box-shadow: 0px 0px 0px 1px #373737;
+						@include addPrefixPlaceholder(placeholder, color, #5c5c5c);
+						@include addPrefixPlaceholder(placeholder, font-size, 16px);
+					}	
+				}
+				.btn {
+				    margin-top: 25px;
+				    width: 100%;
+					height: 40px;
+					font-size: 15px;
+					text-transform: uppercase;
+					float: right;
+					font-weight: 700;
+				}
+			}
+		}
+	}
+}
+#SuccessAdd {
+	.modal-header {
+		padding: 0px;
+		border-bottom: none;
+		&_icon {
+			width: 20px;
+			height: 20px;
+			line-height: 12px;
+			text-align: center;
+			border: 2px solid $turq;
+			border-radius: 50%;
+			margin: auto;
+			img {
+				vertical-align: middle;
+				width: 11px;
+				height: 9px;
+				margin-left: 1px;
+			}
+		}
+		.modal-title {
+			color: #5f5d5b;
+			font-size: 16px;
+			text-transform: uppercase;
+			text-align: center;
+			margin-top: 10px;
+			line-height: 1;
+		}
+	}
+	.modal-content {
+		padding: 40px 70px;
+	}
+	.modal-body {
+		padding: 0px;
+		&_img {
+			width: 110px;
+			min-height: 110px;
+			line-height: 110px;
+		    text-align: center;
+			background-color: #f7f7f7;
+			margin: 20px auto 15px auto;
+			img {
+				vertical-align: middle;
+				width: 100%;
+			}
+		}
+		&_name {
+			text-align: center;
+			text-transform: uppercase;
+			font-size: 16px;
+			font-weight: 700;
+			color: #595959;
+			margin-bottom: 25px;
+		}
+	}
+	.modal-footer {
+		border-top: none;
+		padding: 0px;
+		.btn + .btn {
+			margin-top: 10px;
+			margin-left: 0px;
+			background-color: #f7f7f7;
+			color: #5f5d5b;
+		}
+		.btn {
+			height: 40px;
+			background-color: #414141;
+			font-size: 13px;
+			text-transform: uppercase;
+			&:hover {
+				color: $main_color;
+				background-color: $turq;
+			}
+		}
+	}
+}

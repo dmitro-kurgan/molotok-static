@@ -1,0 +1,1324 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Product page</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <link href="./css/style.css" rel="stylesheet"></head>
+  <body>
+<header>
+  <div class="header" id="header">
+    <div class="header_mob" id="headerMob">
+      <div class="header_mob_content" id="headerMobContent">
+        <div class="header_mob_top clearfix" id="headerMobTop">
+          <div class="container"></div>
+        </div>
+        <div class="header_mob_mid" id="headerMobMid">
+          <div class="container">
+            <div class="header_mob_logo" id="headerMobLogo"></div>
+            <div class="header_mob_cart clearfix" id="headerMobCart"></div>
+            <div class="header_mob_cartInner" id="headerMobCartInner"></div>
+            <div class="header_mob_search" id="headerMobSearch"></div>
+          </div>
+        </div>
+        <div class="header_mob_bottom clearfix" id="headerMobBottom">
+          <div class="container">
+            <div class="menu" id="mobDropdown">Каталог</div>
+            <div class="header_mob_tel" id="headerMobTel"></div>
+            <div class="header_hamburger"><span class="top"></span><span class="mid"></span><span class="bottom"></span></div>
+          </div>
+          <div id="headerMobDropdown"></div>
+        </div>
+      </div>
+      <div class="header_mob_menu-hid" id="headerMobMenuHid">
+        <div class="close"></div>
+        <div class="header_mob_menu" id="headerMobMenu"></div>
+        <div class="header_mob_socials clearfix" id="headerMobSocials"></div>
+      </div>
+    </div>
+    <div class="header_top" id="headerTop">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-6">
+            <div id="headerTel">
+              <div class="header_tel"><span class="fa fa-phone" id="headerPhone"></span>
+                <ul class="clearfix">
+                  <li><a href="tel:+380686313415">(068) 631-34-15</a></li>
+                  <li><a href="tel:+380635508840">(063) 550 88 40</a></li>
+                  <li><a href="tel:+380505322868">(050) 532-28-68</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div id="headerTopMenu">
+              <ul class="header_top_menu">
+                <li class="header_top_menu-list"><a href="enter.html">Мой аккаунт</a></li>
+                <li class="header_top_menu-list"><a href="compare.html">Сравнение</a></li>
+                <li class="header_top_menu-list menu-item-has-children language"><img src="images/ukraine.svg" alt=""><a href="#" id="langUkr">Українська</a>
+                  <div class="sub-menu">
+                    <ul>
+                      <li><a href="#">
+                          <p id="langRus">Русский</p><img src="images/rus.svg" alt=""></a></li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="header_top_menu-list menu-item-has-children"><a class="header_city" href="#" id="headerCity">г. Харьков</a>
+                  <div class="sub-menu">
+                    <ul>
+                      <li><a href="#">г. Киев</a></li>
+                      <li><a href="#">г. Одесса</a></li>
+                    </ul>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="header_main" id="headerMain">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-1">
+            <div class="header_main_left">
+              <div id="headerSocials">
+                <ul class="header_main_socials">
+                  <li><a class="fa fa-facebook" href="#"></a></li>
+                  <li><a class="fa fa-twitter" href="#"></a></li>
+                  <li><a class="fa fa-instagram" href="#" style="font-weight: 700;"></a></li>
+                  <li><a class="fa fa-youtube-play" href="#"></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-10">
+            <div class="header_main_center">
+              <div id="headerDropdownWrapper">
+                <div class="header_dropdown" id="headerDropdown">
+                  <div class="header_dropdown_inner">
+                    <div class="row">
+                      <div class="col-xs-6">
+                        <div class="header_dropdown_left">
+                          <h5>Категории</h5>
+                          <div class="header_dropdown_nav">
+                            <ul class="nav nav-pills">
+                              <li class="active"><a data-toggle="pill" href="#tabHeader">АКЦИИ</a></li>
+                              <li><a data-toggle="pill" href="#tabHeader2">Общестроительные материалы</a></li>
+                              <li><a data-toggle="pill" href="#tabHeader3">Отделочные материалы</a></li>
+                              <li><a data-toggle="pill" href="#tabHeader4">Сухие смеси</a></li>
+                              <li><a data-toggle="pill" href="#tabHeader5">Тепло-звукоизоляция</a></li>
+                              <li><a data-toggle="pill" href="#tabHeader6">Пиломатериалы</a></li>
+                              <li><a data-toggle="pill" href="#tabHeader7">Лакокрасочные материалы</a></li>
+                              <li><a data-toggle="pill" href="#tabHeader8">Двери</a></li>
+                              <li><a data-toggle="pill" href="#tabHeader9">Инструменты</a></li>
+                              <li><a data-toggle="pill" href="#tabHeader10">Электроинструмент</a></li>
+                              <li><a data-toggle="pill" href="#tabHeader11">Напольные покрытия</a></li>
+                              <li><a data-toggle="pill" href="#tabHeader12">Кровля</a></li>
+                              <li><a data-toggle="pill" href="#tabHeader13">Сайдинг/софит</a></li>
+                              <li><a data-toggle="pill" href="#tabHeader14">Строительная химия</a></li>
+                              <li><a data-toggle="pill" href="#tabHeader15">Электротовары</a></li>
+                              <li><a data-toggle="pill" href="#tabHeader16">Сантехника	</a></li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-xs-6">
+                        <div class="header_dropdown_right">
+                          <div class="tab-content">
+                            <div class="tab-pane fade in active" id="tabHeader">
+                              <div class="panel-group" id="accordionHeader">
+                                <h6>Акции</h6>
+                                <ul>
+                                  <li><a href="category.html">Металлочерепица</a></li>
+                                  <li><a href="category.html">Кровельные пленки</a></li>
+                                  <li><a href="category.html">Плоский и волновой шифер</a></li>
+                                  <li><a href="category.html">Кровельные пленки</a></li>
+                                  <li><a href="category.html">Все для кровли</a></li>
+                                  <li class="panel panel-default"><a class="panel_link" data-toggle="collapse" data-parent="#accordionHeader" href="#collapseHeader" aria-expanded="true">Профнастил</a>
+                                    <div class="panel-collapse collapse" id="collapseHeader">
+                                      <div class="panel-body">
+                                        <ul>
+                                          <li><a href="category.html">Все для кровли</a></li>
+                                          <li><a href="category.html">Битумная черепица</a></li>
+                                          <li><a href="category.html">Водосточная система</a></li>
+                                        </ul>
+                                      </div>
+                                    </div>
+                                  </li>
+                                </ul>
+                                <ul>
+                                  <li><a href="category.html">Водосточная система</a></li>
+                                  <li><a href="category.html">Рубероид</a></li>
+                                  <li><a href="category.html">Битумная черепица</a></li>
+                                  <li><a href="category.html">Водосточная система</a></li>
+                                  <li><a href="category.html">Битумная мастика/Праймер</a></li>
+                                  <li><a href="category.html">Все для кровли</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                            <div class="tab-pane fade" id="tabHeader2">
+                              <div class="panel-group" id="accordionHeader2">
+                                <h6>Общестроительные материалы</h6>
+                                <ul>
+                                  <li><a href="category.html">Все для кровли</a></li>
+                                  <li><a href="category.html">Кровельные пленки</a></li>
+                                  <li class="panel panel-default"><a class="panel_link" data-toggle="collapse" data-parent="#accordionHeader2" href="#collapseHeader2" aria-expanded="true">Профнастил</a>
+                                    <div class="panel-collapse collapse" id="collapseHeader2">
+                                      <div class="panel-body">
+                                        <ul>
+                                          <li><a href="category.html">Все для кровли</a></li>
+                                          <li><a href="category.html">Битумная черепица</a></li>
+                                          <li><a href="category.html">Водосточная система</a></li>
+                                        </ul>
+                                      </div>
+                                    </div>
+                                  </li>
+                                  <li><a href="category.html">Плоский и волновой шифер</a></li>
+                                  <li><a href="category.html">Кровельные пленки</a></li>
+                                  <li><a href="category.html">Металлочерепица</a></li>
+                                </ul>
+                                <ul>
+                                  <li><a href="category.html">Все для кровли</a></li>
+                                  <li><a href="category.html">Рубероид</a></li>
+                                  <li><a href="category.html">Водосточная система</a></li>
+                                  <li><a href="category.html">Битумная черепица</a></li>
+                                  <li><a href="category.html">Битумная мастика/Праймер</a></li>
+                                  <li><a href="category.html">Водосточная система</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                            <div class="tab-pane fade" id="tabHeader3">
+                              <div class="panel-group" id="accordionHeader2">
+                                <h6>Отделочные материалы</h6>
+                                <ul>
+                                  <li><a href="category.html">Рубероид</a></li>
+                                  <li><a href="category.html">Кровельные пленки</a></li>
+                                  <li><a href="category.html">Все для кровли</a></li>
+                                  <li><a href="category.html">Плоский и волновой шифер</a></li>
+                                  <li><a href="category.html">Металлочерепица</a></li>
+                                  <li><a href="category.html">Кровельные пленки	</a></li>
+                                </ul>
+                                <ul>
+                                  <li><a href="category.html">Битумная мастика/Праймер</a></li>
+                                  <li><a href="category.html">Все для кровли</a></li>
+                                  <li><a href="category.html">Водосточная система</a></li>
+                                  <li><a href="category.html">Водосточная система</a></li>
+                                  <li><a href="category.html">Битумная черепица</a></li>
+                                  <li class="panel panel-default"><a class="panel_link" data-toggle="collapse" data-parent="#accordionHeader3" href="#collapseHeader3" aria-expanded="true">Профнастил</a>
+                                    <div class="panel-collapse collapse" id="collapseHeader3">
+                                      <div class="panel-body">
+                                        <ul>
+                                          <li><a href="category.html">Все для кровли</a></li>
+                                          <li><a href="category.html">Битумная черепица</a></li>
+                                          <li><a href="category.html">Водосточная система</a></li>
+                                        </ul>
+                                      </div>
+                                    </div>
+                                  </li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div id="headerMainMenuLeft">
+                <div class="header_main_menu header_main_menu--left">
+                  <ul>
+                    <li class="current-menu-item"><a href="./">Главная</a></li>
+                    <li><a class="menu-catalog" href="#" id="dropdown">Каталог</a></li>
+                    <li><a href="cart.html">Корзина</a></li>
+                    <li><a href="enter.html">Кабинет</a></li>
+                    <li><a href="company.html">О компании</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="header_logo-wrapper" id="headerLogo">
+                <div class="header_logo"><a style="background-image:url(images/logo.svg);" href="./"></a>
+                  <p class="header_slogan">С нами вы сможете больше!</p>
+                </div>
+              </div>
+              <div id="headerMainMenuRight">
+                <div class="header_main_menu header_main_menu--right">
+                  <ul>
+                    <li><a href="delivery.html">Оплата и доставка</a></li>
+                    <li><a href="contacts.html">Контакты</a></li>
+                    <li><a href="search.html">Поиск</a></li>
+                    <li><a href="blog.html">Блог</a></li>
+                    <li><a href="delivery.html">Прайс</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-1">
+            <div class="header_main_right">
+              <div class="header_search" id="headerSearch">
+                <form>
+                  <input class="form-control" id="searchInput" type="text" name="search" placeholder="Поиск..."><a class="fa fa-search" href="#" id="searchIcon"></a>
+                  <button type="submit"></button>
+                </form>
+              </div>
+              <div class="header_cart" id="headerCart"><a class="fa fa-shopping-cart" href="#">
+                  <div class="header_cart_circle">
+                    <div class="header_cart_num">2</div>
+                  </div></a></div>
+              <div class="header_cart_inner" id="headerCartInner">
+                <div class="header_cart_top">
+                  <h4 class="header_cart_title">У вас есть <span>
+                       2 товара </span>в корзине</h4>
+                </div>
+                <div class="header_cart_main">
+                  <div class="header_cart_box clearfix">
+                    <div class="header_cart_box_left">
+                      <div class="header_cart_img"><img src="images/pic-2.png" alt=""></div>
+                    </div>
+                    <div class="header_cart_box_right">
+                      <h5 class="header_cart_name">Here product name</h5>
+                      <div class="header_cart_info">
+                        <p class="header_cart_cost">Цена: <span>200 грн</span></p>
+                        <p class="header_cart_quantity">Количество: <span>02</span></p>
+                      </div><a class="header_cart_del" href="#"><span class="close"></span></a>
+                    </div>
+                  </div>
+                  <div class="header_cart_box clearfix">
+                    <div class="header_cart_box_left">
+                      <div class="header_cart_img"><img src="images/pic-2.png" alt=""></div>
+                    </div>
+                    <div class="header_cart_box_right">
+                      <h5 class="header_cart_name">Here product name</h5>
+                      <div class="header_cart_info">
+                        <p class="header_cart_cost">Цена: <span>200 грн</span></p>
+                        <p class="header_cart_quantity">Количество: <span>02</span></p>
+                      </div><a class="header_cart_del" href="#"><span class="close"></span></a>
+                    </div>
+                  </div>
+                </div>
+                <div class="header_cart_bottom">
+                  <div class="header_cart_total">
+                    <p>Всего</p><span>800.00 грн</span>
+                  </div>
+                  <div class="header_cart_btns"><a class="btn to-card" href="cart.html">Перейти в корзину</a><a class="btn check-out" href="cart.html">Оформить заказ</a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+    <section class="breadcrumb">
+      <div class="container_content">
+        <ul class="clearfix">
+          <li><a href="./">Главная</a></li>
+          <li><a href="#">Каталог товаров</a></li>
+          <li><a href="product-pg.html">Страница товара</a></li>
+        </ul>
+      </div>
+    </section>
+    <div class="content content--product-pg">
+      <div class="container_content">
+        <section class="product-pg">
+          <div class="product-pg_block">
+            <div class="row">
+              <div class="col-sm-5">
+                <div class="product-pg_left" id="sliderForBlock">
+                  <div class="slider slick-for" id="productSliderFor">
+                                        <div>
+                                          <div class="slick-for_box">
+                                            <div class="product-pg_sale">
+                                              <div class="slick-for_img" style="background-image: url(images/ceresit-pic-2.jpg);"></div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                        <div>
+                                          <div class="slick-for_box">
+                                            <div class="product-pg_sale">
+                                              <div class="slick-for_img" style="background-image: url(images/ceresit-pic-1.jpg);"></div>
+                                            </div>
+                                          </div>
+                                        </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-7">
+                <div class="product-pg_right">
+                  <div class="product-pg_top">
+                    <div class="clearfix">
+                      <h3 class="product-pg_name">клей для плитки ceresit cm-11 (25 кг)</h3>
+                      <div class="product-pg_rating product-pg_rating--3">
+                        <div class="product-pg_total">(отзывов: 3)</div>
+                        <div class="product-pg_rating_stars"><span class="product-pg_rating_star">☆</span><span class="product-pg_rating_star">☆</span><span class="product-pg_rating_star">☆</span><span class="product-pg_rating_star">☆</span><span class="product-pg_rating_star">☆</span></div>
+                      </div>
+                    </div>
+                    <div class="clearfix">
+                      <div class="product-pg_price">103.00 грн</div>
+                      <div class="product-pg_price product-pg_price-old">109.90 грн</div>
+                    </div>
+                    <div>
+                      <div class="product-pg_stock"><span class="yes">
+                           В наличии</span></div>
+                    </div>
+                  </div>
+                  <div class="product-pg_main">
+                    <div class="product-pg_txt">
+                      <p>Клей для тонкослойного крепления керамических плиток при внутренних и наружных работах</p>
+                    </div>
+                    <div>
+                      <div class="product-pg_product-code">
+                        <p>Код товара: <span>1234</span></p>
+                      </div><a class="buy-oneclick" href="#" data-toggle="modal" data-target="#BuyModal">Купить в один клик</a>
+                    </div>
+                    <div>
+                      <div class="product-pg_quantity"><span class="plus">+</span>
+                        <input class="input" value="1" type=""><span class="minus">-</span>
+                      </div>
+                      <div class="product-pg_buy clearfix">
+                        <ul>
+                          <li><span><a href="#"></a></span></li>
+                          <li><span><a href="#"></a></span></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="product-pg_bottom" id="sliderNavBlock">
+                    <div class="slider slick-nav" id="productSliderNav">
+                                            <div>
+                                              <div class="slick-nav_box">
+                                                <div class="slick-nav_img" style="background-image: url(images/ceresit-pic-2.jpg);"></div>
+                                              </div>
+                                            </div>
+                                            <div>
+                                              <div class="slick-nav_box">
+                                                <div class="slick-nav_img" style="background-image: url(images/ceresit-pic-1.jpg);"></div>
+                                              </div>
+                                            </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="product-pg_tabs">
+            <div class="row">
+              <div class="col-sm-3">
+                <div class="product-pg_tabs_left">
+                  <div class="product-pg_nav-menu">
+                    <ul class="nav nav-tabs1 nav-pills" id="nav-tabs">
+                      <li class="active"><a data-toggle="pill" href="#tab1">Описание</a></li>
+                      <li><a data-toggle="pill" href="#tab3">Характеристики</a></li>
+                      <li><a data-toggle="pill" href="#tab2">Отзывы</a></li>
+                      <li><a data-toggle="pill" href="#tab4">Доставка</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-9">
+                <div class="product-pg_tabs_right">
+                  <div class="product-pg_tab-content">
+                    <div class="tab-content">
+                      <div class="tab-pane fade in active" id="tab1">
+                        <div class="product-pg_delivery description">
+                          <div class="product-pg_delivery_name">Клей для плитки ceresit CM-11 (25 кг)</div>
+                          <h6>Свойства:</h6>
+                          <ol>
+                            <li>Водостойкий</li>
+                            <li>Морозостойкий</li>
+                            <li>Технологичный</li>
+                            <li>Устойчивый на вертикальных поверхностях</li>
+                            <li>Не горючий</li>
+                          </ol>
+                          <h6>Область применения:</h6>
+                          <p>
+                            Клей Ceresit СМ 11 предназначен для устройства плиточных облицовок на стенах и полах из впитывающих и слабо впитывающих (водопоглощение более 3%) керамических, каменно-керамических и каменных плиток, в гражданском и промышленном строительстве при наружных и внутренних работах, в т.ч. для эксплуатации во влажных помещениях. Толщина клеевого слоя при его использовании должна составлять от 2 до 10 мм.
+                            Ceresit СМ 11 применяется также для устройства плиточных облицовок в небольших закрытых бассейнах. Крепление плитки в этом случае осуществляют не ранее чем через 3 суток после нанесения гидроизоляции Ceresit СR 65.
+                            Дополнительное введение в Ceresit СМ 11 эластификатора Ceresit СС 83 позволяет его использовать для крепления плиток, в т.ч. с водопоглощением менее 1%:<strong></strong>
+                          </p>
+                          <ul>
+                            <li>на деформирующиеся основания, например, гипсокартонные и стружечные плиты, обогреваемые полы;</li>
+                            <li>на деформирующиеся основания, например, гипсокартонные и стружечные плиты, обогреваемые полы;</li>
+                            <li>на прочные и имеющие хорошую адгезию малярные покрытия;</li>
+                            <li>на гипсовые и ангидритные основания;</li>
+                            <li>на ячеистый и «молодой» бетон (имеющий „возраст“ не менее 3 месяцев).</li>
+                            <li>на террасах, балконах, наружных лестницах, а также в наружных бассейнах и резервуарах;</li>
+                            <li>на существующие керамические облицовки;</li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="tab-pane fade" id="tab2">
+                        <div class="product-pg_comments">
+                          <div class="product-pg_comments_title">
+                            <h2>Отзывы клиентов</h2>
+                          </div>
+                          <div class="product-pg_comments_block clearfix">
+                            <div class="product-pg_comments_box clearfix">
+                              <div class="product-pg_rating product-pg_rating--3"><span class="product-pg_rating_star">☆</span><span class="product-pg_rating_star">☆</span><span class="product-pg_rating_star">☆</span><span class="product-pg_rating_star">☆</span><span class="product-pg_rating_star">☆</span></div>
+                              <div class="product-pg_comments_inner clearfix">
+                                <div class="product-pg_comments_left">
+                                  <div class="product-pg_comments_name">Тим Берглинг</div>
+                                  <div class="product-pg_comments_data">03 Января, 2018</div>
+                                </div>
+                                <div class="product-pg_comments_right">
+                                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas pretium orci at congue tincidunt. Phasellus vel ullamcorper magna. Duis sit amet hendrerit lorem. Morbi lobortis dolor sem, vel aliquet nisi sollicitudin id. Vestibulum non porttitor magna, id ultricies ante. Donec lacus nisi, scelerisque ut efficitur ut, bibendum quis nulla.</p>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="product-pg_comments_box clearfix">
+                              <div class="product-pg_rating product-pg_rating--4"><span class="product-pg_rating_star">☆</span><span class="product-pg_rating_star">☆</span><span class="product-pg_rating_star">☆</span><span class="product-pg_rating_star">☆</span><span class="product-pg_rating_star">☆</span></div>
+                              <div class="product-pg_comments_inner clearfix">
+                                <div class="product-pg_comments_left">
+                                  <div class="product-pg_comments_name">Тим Берглинг</div>
+                                  <div class="product-pg_comments_data">03 Января, 2018</div>
+                                </div>
+                                <div class="product-pg_comments_right">
+                                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas pretium orci at congue tincidunt. Phasellus vel ullamcorper magna. Duis sit amet hendrerit lorem. Morbi lobortis dolor sem, vel aliquet nisi sollicitudin id. Vestibulum non porttitor magna, id ultricies ante. Donec lacus nisi, scelerisque ut efficitur ut, bibendum quis nulla.</p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="product-pg_comments_title"> 
+                            <h2>Оставьте свой отзыв</h2>
+                          </div>
+                          <div class="product-pg_comments_rating">
+                            <h3>Ваш рейтинг</h3>
+                            <ul class="clearfix">
+                              <li><a href="#">
+                                  <div class="product-pg_rating">
+                                    <div class="product-pg_rating_stars"><span class="product-pg_rating_star">☆</span></div>
+                                  </div></a></li>
+                              <li><a href="#">
+                                  <div class="product-pg_rating">
+                                    <div class="product-pg_rating_stars"><span class="product-pg_rating_star">☆</span><span class="product-pg_rating_star">☆</span></div>
+                                  </div></a></li>
+                              <li><a href="#">
+                                  <div class="product-pg_rating">
+                                    <div class="product-pg_rating_stars"><span class="product-pg_rating_star">☆</span><span class="product-pg_rating_star">☆</span><span class="product-pg_rating_star">☆</span></div>
+                                  </div></a></li>
+                              <li><a href="#">
+                                  <div class="product-pg_rating">
+                                    <div class="product-pg_rating_stars"><span class="product-pg_rating_star">☆</span><span class="product-pg_rating_star">☆</span><span class="product-pg_rating_star">☆</span><span class="product-pg_rating_star">☆</span></div>
+                                  </div></a></li>
+                              <li><a href="#">
+                                  <div class="product-pg_rating">
+                                    <div class="product-pg_rating_stars"><span class="product-pg_rating_star">☆</span><span class="product-pg_rating_star">☆</span><span class="product-pg_rating_star">☆</span><span class="product-pg_rating_star">☆</span><span class="product-pg_rating_star">☆</span></div>
+                                  </div></a></li>
+                            </ul>
+                            <form>
+                              <div class="row">
+                                <div class="form-group col-sm-6">
+                                  <input class="form-control" type="text" name="name" placeholder="Ваше имя" required>
+                                </div>
+                                <div class="form-group col-sm-6">
+                                  <input class="form-control" type="email" name="email" placeholder="Ваш e-mail" required>
+                                </div>
+                              </div>
+                              <div class="form-group">
+                                <textarea class="form-control" type="text" name="message" placeholder="Ваш комментарий" rows="5"></textarea>
+                              </div>
+                              <button class="btn turq-btn" type="submit">Оставить отзыв</button>
+                            </form>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="tab-pane fade" id="tab3">
+                        <div class="product-pg_char">
+                          <table class="table table-bordered">
+                            <tbody>
+                              <tr>
+                                <td> 
+                                  <h6>Производитель</h6>
+                                </td>
+                                <td> 
+                                  <p>Технониколь</p>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td> 
+                                  <h6>Вес</h6>
+                                </td>
+                                <td>
+                                  <p>25 кг</p>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td> 
+                                  <h6>Состав</h6>
+                                </td>
+                                <td> 
+                                  <p>Смесь цемента с минеральными наполнителями и модификаторами</p>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td> 
+                                  <h6>Требуемое кол-во воды затворения</h6>
+                                </td>
+                                <td> 
+                                  <p>1,2 л воды на 5 кг сухой смеси</p>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td> 
+                                  <h6>Время потребления</h6>
+                                </td>
+                                <td> 
+                                  <p>до 2 часов</p>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td> 
+                                  <h6>Температура основания</h6>
+                                </td>
+                                <td> 
+                                  <p>от + 5°C до + 30°C</p>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td> 
+                                  <h6>Сползание плитки</h6>
+                                </td>
+                                <td> 
+                                  <p>менее 0,1 мм</p>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td> 
+                                  <h6>Затирка швов</h6>
+                                </td>
+                                <td> 
+                                  <p>через 24 часов</p>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td> 
+                                  <h6>Теплостойкость</h6>
+                                </td>
+                                <td> 
+                                  <p>от — 50°C до + 70°C</p>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td> 
+                                  <h6>Расход, кг/м</h6>
+                                </td>
+                                <td> 
+                                  <p>от 2 до 7,8 кг.</p>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                      <div class="tab-pane fade" id="tab4">
+                        <div class="product-pg_delivery">
+                          <div class="product-pg_delivery_name">Клей для плитки ceresit CM-11 (25 кг)</div>
+                          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eget purus diam. In finibus mi et malesuada fermentum. Etiam a lacinia nulla. Praesent commodo leo a elit venenatis rutrum. Aenean consequat quam tincidunt sem tempor, a varius urna suscipit. Aenean tempus mi id finibus sollicitudin. Donec tempus purus turpis, at dictum lorem pellentesque sed. Sed a rhoncus mauris. Donec ultricies erat nec vehicula consequat.</p>
+                          <p>Curabitur luctus eros justo, eget mattis ligula gravida congue. Pellentesque a vestibulum erat, id ultricies ante. Quisque nulla tellus, rutrum et nisl ac, auctor blandit tellus. Quisque tristique rhoncus dui in dapibus. Sed dui eros, dictum gravida egestas vel, rhoncus ut nisl. Praesent gravida nibh ac interdum molestie. Vivamus purus ex, facilisis a ligula ac, luctus feugiat nunc. Etiam orci diam, blandit a dui quis, ultricies molestie ligula. Quisque iaculis scelerisque magna, vel semper enim.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="recomended">
+          <h2>С этим также покупают</h2>
+          <div class="slider slick-recomended">
+                        <div><a class="slick-recomended_box" href="#">
+                            <div class="slick-recomended_box_main">
+                              <div class="slick-recomended_box_top">
+                                <div></div>
+                              </div>
+                              <div class="slick-recomended_box_img" style="background-image: url(images/1-br-aquamast.jpg);"></div>
+                            </div>
+                            <div class="slick-recomended_box_bottom">
+                              <div class="slick-recomended_box_name">
+                                <p>AQUAMAST МАСТИКА БИТУМНО-РЕЗИНОВАЯ (10КГ)</p>
+                              </div>
+                              <div class="slick-recomended_box_price">
+                                <p class="slick-recomended_box_cost">359 грн</p>
+                                <p></p>
+                              </div>
+                              <div class="slick-recomended_box_text tip">
+                                <p>Холодная гидроизоляционная мастика на основе битума и дробленой резины. Для устройства кровельного покрытия.</p>
+                              </div>
+                            </div></a>
+                          <div class="slick-recomended_panel clearfix">
+                            <ul>
+                              <li><span><a href="#"></a>
+                                  <div class="description">
+                                    <p>В сравнение</p>
+                                  </div></span></li>
+                              <li><span><a href="#"></a>
+                                  <div class="description one-click">
+                                    <p>Купить в один клик</p>
+                                  </div></span></li>
+                              <li><a href="#">купить</a></li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div><a class="slick-recomended_box" href="#">
+                            <div class="slick-recomended_box_main">
+                              <div class="slick-recomended_box_top">
+                                <div class="sticker sticker-new">New</div>
+                              </div>
+                              <div class="slick-recomended_box_img" style="background-image: url(images/Evroruberojd-HKP-768x1024.png);"></div>
+                            </div>
+                            <div class="slick-recomended_box_bottom">
+                              <div class="slick-recomended_box_name">
+                                <p>ОРЕОЛ-1 ЕВРОРУБЕРОИД ХПП 2,0 (15М2)</p>
+                              </div>
+                              <div class="slick-recomended_box_price">
+                                <p class="slick-recomended_box_cost">380 грн.</p>
+                                <p class="buy-it_box_sale">410 грн</p>
+                              </div>
+                              <div class="slick-recomended_box_text tip">
+                                <p>Битумно-полимерный материал для гидроизоляции класса Эконом. Для нижнего слоя мягкой кровли и гидроизоляции зданий</p>
+                              </div>
+                            </div></a>
+                          <div class="slick-recomended_panel clearfix">
+                            <ul>
+                              <li><span><a href="#"></a>
+                                  <div class="description">
+                                    <p>В сравнение</p>
+                                  </div></span></li>
+                              <li><span><a href="#"></a>
+                                  <div class="description one-click">
+                                    <p>Купить в один клик</p>
+                                  </div></span></li>
+                              <li><a href="#">купить</a></li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div><a class="slick-recomended_box" href="#">
+                            <div class="slick-recomended_box_main">
+                              <div class="slick-recomended_box_top">
+                                <div></div>
+                              </div>
+                              <div class="slick-recomended_box_img" style="background-image: url(images/P25_L.jpg);"></div>
+                            </div>
+                            <div class="slick-recomended_box_bottom">
+                              <div class="slick-recomended_box_name">
+                                <p>ПОЛИМИН П-24 ЭЛАСТ-КЛЕЙ 25КГ</p>
+                              </div>
+                              <div class="slick-recomended_box_price">
+                                <p class="slick-recomended_box_cost">259 грн</p>
+                                <p></p>
+                              </div>
+                              <div class="slick-recomended_box_text tip">
+                                <p>ПОЛИМИН П-24 эласт-клей  (для балконов и полов с электро и водным обогревом)</p>
+                              </div>
+                            </div></a>
+                          <div class="slick-recomended_panel clearfix">
+                            <ul>
+                              <li><span><a href="#"></a>
+                                  <div class="description">
+                                    <p>В сравнение</p>
+                                  </div></span></li>
+                              <li><span><a href="#"></a>
+                                  <div class="description one-click">
+                                    <p>Купить в один клик</p>
+                                  </div></span></li>
+                              <li><a href="#">купить</a></li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div><a class="slick-recomended_box" href="#">
+                            <div class="slick-recomended_box_main">
+                              <div class="slick-recomended_box_top">
+                                <div></div>
+                              </div>
+                              <div class="slick-recomended_box_img" style="background-image: url(images/1-osb-qsbosb-12-mm-1250-2500-krono-ukraina.jpg);"></div>
+                            </div>
+                            <div class="slick-recomended_box_bottom">
+                              <div class="slick-recomended_box_name">
+                                <p>OSB (ХАРЬКОВ) 2500*1250*10ММ</p>
+                              </div>
+                              <div class="slick-recomended_box_price">
+                                <p class="slick-recomended_box_cost">300 грн</p>
+                                <p></p>
+                              </div>
+                              <div class="slick-recomended_box_text tip">
+                                <p>Ориентированно-стружечная плита (ОСП) — это многослойный (3-4 слоя) лист из древесной стружки, склеенной различными смолами с добавлением синтетического воска и борной кислоты.</p>
+                              </div>
+                            </div></a>
+                          <div class="slick-recomended_panel clearfix">
+                            <ul>
+                              <li><span><a href="#"></a>
+                                  <div class="description">
+                                    <p>В сравнение</p>
+                                  </div></span></li>
+                              <li><span><a href="#"></a>
+                                  <div class="description one-click">
+                                    <p>Купить в один клик</p>
+                                  </div></span></li>
+                              <li><a href="#">купить</a></li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div><a class="slick-recomended_box" href="#">
+                            <div class="slick-recomended_box_main">
+                              <div class="slick-recomended_box_top">
+                                <div class="sticker sticker-new">New</div>
+                              </div>
+                              <div class="slick-recomended_box_img" style="background-image: url(images/ode.jpg);"></div>
+                            </div>
+                            <div class="slick-recomended_box_bottom">
+                              <div class="slick-recomended_box_name">
+                                <p>УТЕПЛИТЕЛЬ ODE ФОЛЬГИРОВАННЫЙ 50*1200*1000 12М2</p>
+                              </div>
+                              <div class="slick-recomended_box_price">
+                                <p class="slick-recomended_box_cost">475 грн</p>
+                                <p></p>
+                              </div>
+                              <div class="slick-recomended_box_text tip">
+                                <p>Тепло- звукоизоляционный материал минерального происхождения Knauf Insulation 18м2</p>
+                              </div>
+                            </div></a>
+                          <div class="slick-recomended_panel clearfix">
+                            <ul>
+                              <li><span><a href="#"></a>
+                                  <div class="description">
+                                    <p>В сравнение</p>
+                                  </div></span></li>
+                              <li><span><a href="#"></a>
+                                  <div class="description one-click">
+                                    <p>Купить в один клик</p>
+                                  </div></span></li>
+                              <li><a href="#">купить</a></li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div><a class="slick-recomended_box" href="#">
+                            <div class="slick-recomended_box_main">
+                              <div class="slick-recomended_box_top">
+                                <div class="sticker sticker-new">New</div>
+                              </div>
+                              <div class="slick-recomended_box_img" style="background-image: url(images/Stark_deltashlif_FS_110.png);"></div>
+                            </div>
+                            <div class="slick-recomended_box_bottom">
+                              <div class="slick-recomended_box_name">
+                                <p>ДЕЛЬТАШЛИФМАШИНА ВИБРАЦИОННАЯ STARK FS 110</p>
+                              </div>
+                              <div class="slick-recomended_box_price">
+                                <p class="slick-recomended_box_cost">537 грн</p>
+                                <p class="buy-it_box_sale">581 грн</p>
+                              </div>
+                              <div class="slick-recomended_box_text tip">
+                                <p>Дельташлифмашина для шлифования древесины, пластмассы, металла, композиционных материалов. Может применяться для полировки поверхности мебели, если использовать мягкую ткань вместо наждачной бумаги.</p>
+                              </div>
+                            </div></a>
+                          <div class="slick-recomended_panel clearfix">
+                            <ul>
+                              <li><span><a href="#"></a>
+                                  <div class="description">
+                                    <p>В сравнение</p>
+                                  </div></span></li>
+                              <li><span><a href="#"></a>
+                                  <div class="description one-click">
+                                    <p>Купить в один клик</p>
+                                  </div></span></li>
+                              <li><a href="#">купить</a></li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div><a class="slick-recomended_box" href="#">
+                            <div class="slick-recomended_box_main">
+                              <div class="slick-recomended_box_top">
+                                <div></div>
+                              </div>
+                              <div class="slick-recomended_box_img" style="background-image: url(images/Elektrodrel-ID500new.png);"></div>
+                            </div>
+                            <div class="slick-recomended_box_bottom">
+                              <div class="slick-recomended_box_name">
+                                <p>ДРЕЛЬ БЕЗУДАРНАЯ STARK ID 500</p>
+                              </div>
+                              <div class="slick-recomended_box_price">
+                                <p class="slick-recomended_box_cost">726 грн</p>
+                                <p class="buy-it_box_sale">785.00 грн</p>
+                              </div>
+                              <div class="slick-recomended_box_text tip">
+                                <p>Электродрель, предназначенная для сверления отверстий в древесине, металле и бетоне. Может использоваться как шуруповерт для завинчивания шурупов и нарезания резьбы.</p>
+                              </div>
+                            </div></a>
+                          <div class="slick-recomended_panel clearfix">
+                            <ul>
+                              <li><span><a href="#"></a>
+                                  <div class="description">
+                                    <p>В сравнение</p>
+                                  </div></span></li>
+                              <li><span><a href="#"></a>
+                                  <div class="description one-click">
+                                    <p>Купить в один клик</p>
+                                  </div></span></li>
+                              <li><a href="#">купить</a></li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div><a class="slick-recomended_box" href="#">
+                            <div class="slick-recomended_box_main">
+                              <div class="slick-recomended_box_top">
+                                <div class="sticker sticker-new">New</div>
+                              </div>
+                              <div class="slick-recomended_box_img" style="background-image: url(images/1-mira3100-150x150.jpg);"></div>
+                            </div>
+                            <div class="slick-recomended_box_bottom">
+                              <div class="slick-recomended_box_name">
+                                <p>КЛЕЙ ДЛЯ ПЛИТКИ ЭЛАСТИЧНЫЙ MIRA 3100 UNIFIХ (СЕРЫЙ) 25 КГ</p>
+                              </div>
+                              <div class="slick-recomended_box_price">
+                                <p class="slick-recomended_box_cost">260 грн</p>
+                                <p></p>
+                              </div>
+                              <div class="slick-recomended_box_text tip">
+                                <p>Клей для плитки Mira 3100 standardfix для облицовки керамической плиткой стен и полов внутри и снаружи помещений. Высокая степень адгезии</p>
+                              </div>
+                            </div></a>
+                          <div class="slick-recomended_panel clearfix">
+                            <ul>
+                              <li><span><a href="#"></a>
+                                  <div class="description">
+                                    <p>В сравнение</p>
+                                  </div></span></li>
+                              <li><span><a href="#"></a>
+                                  <div class="description one-click">
+                                    <p>Купить в один клик</p>
+                                  </div></span></li>
+                              <li><a href="#">купить</a></li>
+                            </ul>
+                          </div>
+                        </div>
+          </div>
+        </section>
+        <section class="viewed">
+          <h2>Вы просматривали</h2>
+          <div class="slider slick-viewed">
+                        <div><a class="slick-viewed_box" href="#">
+                            <div class="slick-viewed_box_main">
+                              <div class="slick-viewed_box_top">
+                                <div></div>
+                              </div>
+                              <div class="slick-viewed_box_img" style="background-image: url(images/1-br-aquamast.jpg);"></div>
+                            </div>
+                            <div class="slick-viewed_box_bottom">
+                              <div class="slick-viewed_box_name">
+                                <p>AQUAMAST МАСТИКА БИТУМНО-РЕЗИНОВАЯ (10КГ)</p>
+                              </div>
+                              <div class="slick-viewed_box_price">
+                                <p class="slick-viewed_box_cost">359 грн</p>
+                                <p></p>
+                              </div>
+                              <div class="slick-viewed_box_text tip">
+                                <p>Холодная гидроизоляционная мастика на основе битума и дробленой резины. Для устройства кровельного покрытия.</p>
+                              </div>
+                            </div></a>
+                          <div class="slick-viewed_panel clearfix">
+                            <ul>
+                              <li><span><a href="#"></a>
+                                  <div class="description">
+                                    <p>В сравнение</p>
+                                  </div></span></li>
+                              <li><span><a href="#"></a>
+                                  <div class="description one-click">
+                                    <p>Купить в один клик</p>
+                                  </div></span></li>
+                              <li><a href="#">купить</a></li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div><a class="slick-viewed_box" href="#">
+                            <div class="slick-viewed_box_main">
+                              <div class="slick-viewed_box_top">
+                                <div class="sticker sticker-new">New</div>
+                              </div>
+                              <div class="slick-viewed_box_img" style="background-image: url(images/Evroruberojd-HKP-768x1024.png);"></div>
+                            </div>
+                            <div class="slick-viewed_box_bottom">
+                              <div class="slick-viewed_box_name">
+                                <p>ОРЕОЛ-1 ЕВРОРУБЕРОИД ХПП 2,0 (15М2)</p>
+                              </div>
+                              <div class="slick-viewed_box_price">
+                                <p class="slick-viewed_box_cost">380 грн.</p>
+                                <p class="buy-it_box_sale">410 грн</p>
+                              </div>
+                              <div class="slick-viewed_box_text tip">
+                                <p>Битумно-полимерный материал для гидроизоляции класса Эконом. Для нижнего слоя мягкой кровли и гидроизоляции зданий</p>
+                              </div>
+                            </div></a>
+                          <div class="slick-viewed_panel clearfix">
+                            <ul>
+                              <li><span><a href="#"></a>
+                                  <div class="description">
+                                    <p>В сравнение</p>
+                                  </div></span></li>
+                              <li><span><a href="#"></a>
+                                  <div class="description one-click">
+                                    <p>Купить в один клик</p>
+                                  </div></span></li>
+                              <li><a href="#">купить</a></li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div><a class="slick-viewed_box" href="#">
+                            <div class="slick-viewed_box_main">
+                              <div class="slick-viewed_box_top">
+                                <div></div>
+                              </div>
+                              <div class="slick-viewed_box_img" style="background-image: url(images/P25_L.jpg);"></div>
+                            </div>
+                            <div class="slick-viewed_box_bottom">
+                              <div class="slick-viewed_box_name">
+                                <p>ПОЛИМИН П-24 ЭЛАСТ-КЛЕЙ 25КГ</p>
+                              </div>
+                              <div class="slick-viewed_box_price">
+                                <p class="slick-viewed_box_cost">259 грн</p>
+                                <p></p>
+                              </div>
+                              <div class="slick-viewed_box_text tip">
+                                <p>ПОЛИМИН П-24 эласт-клей  (для балконов и полов с электро и водным обогревом)</p>
+                              </div>
+                            </div></a>
+                          <div class="slick-viewed_panel clearfix">
+                            <ul>
+                              <li><span><a href="#"></a>
+                                  <div class="description">
+                                    <p>В сравнение</p>
+                                  </div></span></li>
+                              <li><span><a href="#"></a>
+                                  <div class="description one-click">
+                                    <p>Купить в один клик</p>
+                                  </div></span></li>
+                              <li><a href="#">купить</a></li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div><a class="slick-viewed_box" href="#">
+                            <div class="slick-viewed_box_main">
+                              <div class="slick-viewed_box_top">
+                                <div></div>
+                              </div>
+                              <div class="slick-viewed_box_img" style="background-image: url(images/1-osb-qsbosb-12-mm-1250-2500-krono-ukraina.jpg);"></div>
+                            </div>
+                            <div class="slick-viewed_box_bottom">
+                              <div class="slick-viewed_box_name">
+                                <p>OSB (ХАРЬКОВ) 2500*1250*10ММ</p>
+                              </div>
+                              <div class="slick-viewed_box_price">
+                                <p class="slick-viewed_box_cost">300 грн</p>
+                                <p></p>
+                              </div>
+                              <div class="slick-viewed_box_text tip">
+                                <p>Ориентированно-стружечная плита (ОСП) — это многослойный (3-4 слоя) лист из древесной стружки, склеенной различными смолами с добавлением синтетического воска и борной кислоты.</p>
+                              </div>
+                            </div></a>
+                          <div class="slick-viewed_panel clearfix">
+                            <ul>
+                              <li><span><a href="#"></a>
+                                  <div class="description">
+                                    <p>В сравнение</p>
+                                  </div></span></li>
+                              <li><span><a href="#"></a>
+                                  <div class="description one-click">
+                                    <p>Купить в один клик</p>
+                                  </div></span></li>
+                              <li><a href="#">купить</a></li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div><a class="slick-viewed_box" href="#">
+                            <div class="slick-viewed_box_main">
+                              <div class="slick-viewed_box_top">
+                                <div class="sticker sticker-new">New</div>
+                              </div>
+                              <div class="slick-viewed_box_img" style="background-image: url(images/ode.jpg);"></div>
+                            </div>
+                            <div class="slick-viewed_box_bottom">
+                              <div class="slick-viewed_box_name">
+                                <p>УТЕПЛИТЕЛЬ ODE ФОЛЬГИРОВАННЫЙ 50*1200*1000 12М2</p>
+                              </div>
+                              <div class="slick-viewed_box_price">
+                                <p class="slick-viewed_box_cost">475 грн</p>
+                                <p></p>
+                              </div>
+                              <div class="slick-viewed_box_text tip">
+                                <p>Тепло- звукоизоляционный материал минерального происхождения Knauf Insulation 18м2</p>
+                              </div>
+                            </div></a>
+                          <div class="slick-viewed_panel clearfix">
+                            <ul>
+                              <li><span><a href="#"></a>
+                                  <div class="description">
+                                    <p>В сравнение</p>
+                                  </div></span></li>
+                              <li><span><a href="#"></a>
+                                  <div class="description one-click">
+                                    <p>Купить в один клик</p>
+                                  </div></span></li>
+                              <li><a href="#">купить</a></li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div><a class="slick-viewed_box" href="#">
+                            <div class="slick-viewed_box_main">
+                              <div class="slick-viewed_box_top">
+                                <div class="sticker sticker-new">New</div>
+                              </div>
+                              <div class="slick-viewed_box_img" style="background-image: url(images/Stark_deltashlif_FS_110.png);"></div>
+                            </div>
+                            <div class="slick-viewed_box_bottom">
+                              <div class="slick-viewed_box_name">
+                                <p>ДЕЛЬТАШЛИФМАШИНА ВИБРАЦИОННАЯ STARK FS 110</p>
+                              </div>
+                              <div class="slick-viewed_box_price">
+                                <p class="slick-viewed_box_cost">537 грн</p>
+                                <p class="buy-it_box_sale">581 грн</p>
+                              </div>
+                              <div class="slick-viewed_box_text tip">
+                                <p>Дельташлифмашина для шлифования древесины, пластмассы, металла, композиционных материалов. Может применяться для полировки поверхности мебели, если использовать мягкую ткань вместо наждачной бумаги.</p>
+                              </div>
+                            </div></a>
+                          <div class="slick-viewed_panel clearfix">
+                            <ul>
+                              <li><span><a href="#"></a>
+                                  <div class="description">
+                                    <p>В сравнение</p>
+                                  </div></span></li>
+                              <li><span><a href="#"></a>
+                                  <div class="description one-click">
+                                    <p>Купить в один клик</p>
+                                  </div></span></li>
+                              <li><a href="#">купить</a></li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div><a class="slick-viewed_box" href="#">
+                            <div class="slick-viewed_box_main">
+                              <div class="slick-viewed_box_top">
+                                <div></div>
+                              </div>
+                              <div class="slick-viewed_box_img" style="background-image: url(images/Elektrodrel-ID500new.png);"></div>
+                            </div>
+                            <div class="slick-viewed_box_bottom">
+                              <div class="slick-viewed_box_name">
+                                <p>ДРЕЛЬ БЕЗУДАРНАЯ STARK ID 500</p>
+                              </div>
+                              <div class="slick-viewed_box_price">
+                                <p class="slick-viewed_box_cost">726 грн</p>
+                                <p class="buy-it_box_sale">785.00 грн</p>
+                              </div>
+                              <div class="slick-viewed_box_text tip">
+                                <p>Электродрель, предназначенная для сверления отверстий в древесине, металле и бетоне. Может использоваться как шуруповерт для завинчивания шурупов и нарезания резьбы.</p>
+                              </div>
+                            </div></a>
+                          <div class="slick-viewed_panel clearfix">
+                            <ul>
+                              <li><span><a href="#"></a>
+                                  <div class="description">
+                                    <p>В сравнение</p>
+                                  </div></span></li>
+                              <li><span><a href="#"></a>
+                                  <div class="description one-click">
+                                    <p>Купить в один клик</p>
+                                  </div></span></li>
+                              <li><a href="#">купить</a></li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div><a class="slick-viewed_box" href="#">
+                            <div class="slick-viewed_box_main">
+                              <div class="slick-viewed_box_top">
+                                <div class="sticker sticker-new">New</div>
+                              </div>
+                              <div class="slick-viewed_box_img" style="background-image: url(images/1-mira3100-150x150.jpg);"></div>
+                            </div>
+                            <div class="slick-viewed_box_bottom">
+                              <div class="slick-viewed_box_name">
+                                <p>КЛЕЙ ДЛЯ ПЛИТКИ ЭЛАСТИЧНЫЙ MIRA 3100 UNIFIХ (СЕРЫЙ) 25 КГ</p>
+                              </div>
+                              <div class="slick-viewed_box_price">
+                                <p class="slick-viewed_box_cost">260 грн</p>
+                                <p></p>
+                              </div>
+                              <div class="slick-viewed_box_text tip">
+                                <p>Клей для плитки Mira 3100 standardfix для облицовки керамической плиткой стен и полов внутри и снаружи помещений. Высокая степень адгезии</p>
+                              </div>
+                            </div></a>
+                          <div class="slick-viewed_panel clearfix">
+                            <ul>
+                              <li><span><a href="#"></a>
+                                  <div class="description">
+                                    <p>В сравнение</p>
+                                  </div></span></li>
+                              <li><span><a href="#"></a>
+                                  <div class="description one-click">
+                                    <p>Купить в один клик</p>
+                                  </div></span></li>
+                              <li><a href="#">купить</a></li>
+                            </ul>
+                          </div>
+                        </div>
+          </div>
+        </section>
+      </div>
+    </div>
+<footer>
+  <div class="footer" id="footer">
+    <div class="footer_main">
+      <div class="container_content">
+        <div class="row">
+          <div class="col-md-4 col-sm-6">
+            <div class="footer_main_list footer_contacts">
+              <h6>Контакты</h6>
+              <div class="row">
+                <div class="col-sm-3">
+                  <p class="footer_contacts_title"><span>Address:</span></p>
+                </div>
+                <div class="col-sm-8">
+                  <p>AddLorem ipsum dolor sit amet, consectetur ress</p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-sm-3">
+                  <p class="footer_contacts_title"><span>Phone:</span></p>
+                </div>
+                <div class="col-sm-8"><a class="footer_main_list-tel" href="tel:+380000000000">(000) 00 00 000</a><a class="footer_main_list-tel" href="tel:+380000000000">(000) 00 00 000</a></div>
+              </div>
+              <div class="row">
+                <div class="col-sm-3">
+                  <p class="footer_contacts_title"><span>E-mail:</span></p>
+                </div>
+                <div class="col-sm-8"><a href="mailto:molotok@gmail.com">molotok@gmail.com</a></div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-2 col-sm-6">
+            <div class="footer_main_list footer_accounts">
+              <h6>Аккаунт</h6>
+              <ul>
+                <li><a href="enter.html">Мой аккаунт</a></li>
+                <li><a href="orders.html">Мои заказы</a></li>
+                <li><a href="cart.html">Моя корзина</a></li>
+                <li><a href="enter.html">Вход</a></li>
+                <li><a href="registration.html">Регистрация</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-6">
+            <div class="footer_main_list footer_menu">
+              <h6>Меню</h6>
+              <ul>
+                <li><a href="./">Главная</a></li>
+                <li><a href="category.html">Каталог Товаров</a></li>
+                <li><a href="company.html">О Компании</a></li>
+                <li><a href="delivery.html">Оплата и доставка</a></li>
+                <li><a href="contacts.html">Контакты</a></li>
+                <li><a href="blog.html">Блог</a></li>
+                <li><a href="delivery.html">Прайс</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-6">
+            <div class="footer_main_list footer_cart">
+              <h6>Ваша корзина</h6>
+              <p class="quantity">В корзине 4 товара</p>
+              <p class="price">на сумму 18 850.00 грн</p>
+              <div class="footer_main_blk"><a class="footer_main_box" href="#">
+                  <div class="footer_main_img" style="background-image: url(images/pic-9.png);"></div>
+                  <div class="footer_main_name">Product...</div></a><a class="footer_main_box" href="#">
+                  <div class="footer_main_img" style="background-image: url(images/pic-4.png);"></div>
+                  <div class="footer_main_name">Product...</div></a><a class="footer_main_box" href="#">
+                  <div class="footer_main_img" style="background-image: url(images/pic-7.png);"></div>
+                  <div class="footer_main_name">Product...</div></a></div><a class="to-cart" href="cart.html">Перейти в корзину
+                <object><span class="fa fa-shopping-cart"></span></object></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer_bottom">
+      <div class="container_content">
+        <div class="row">
+          <div class="col-sm-6"><a class="production" href="http://unitspace.top">Production by:</a></div>
+          <div class="col-sm-6">
+            <p class="copyright">
+               © Molotok <span id="year"></span>All Rights Reserved.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+<div class="modal fade" id="BuyModal" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button class="close" type="button" data-dismiss="modal"></button>
+        <h4 class="modal-title">Быстрый заказ</h4>
+      </div>
+      <div class="modal-body clearfix">
+        <div class="modal-body_top">
+          <div class="modal-body_img"><img src="images/ceresit-pic-2.jpg" alt=""></div>
+          <div class="modal-body_quantity"><span class="plus">+</span>
+            <input class="input" value="1" type=""><span class="minus">-</span>
+          </div>
+          <div class="modal-body_name">
+            <h5>Клей для плитки CERESIT СМ-11 (25 кг)</h5>
+          </div>
+          <div class="modal-body_cost">
+            <p>Сумма к оплате: 103.00 грн</p>
+          </div>
+        </div>
+        <div class="modal-body_bottom">
+          <h6>Заполните поля ввода</h6>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <form>
+          <div class="row">
+            <div class="form-group col-sm-6">
+              <label for="name">Ваше имя</label>
+              <input class="form-control" id="name" type="text" name="name" placeholder="Введите ваше имя" required>
+            </div>
+            <div class="form-group col-sm-6">
+              <label for="email">E-mail</label>
+              <input class="form-control" id="email" type="text" name="email" placeholder="E-mail" required>
+            </div>
+            <div class="form-group col-sm-6">
+              <label for="tel">Телефон</label>
+              <input class="form-control" id="tel" type="text" name="tel" placeholder="Телефон" required>
+            </div>
+            <div class="form-group col-sm-6">
+              <button class="btn turq-btn" type="submit">Заказать </button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="SuccessAdd" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button class="close" type="button" data-dismiss="modal"></button>
+        <div class="modal-header_icon"><img src="images/ok-turq.png" alt=""></div>
+        <h4 class="modal-title">Продукт добавлен в корзину</h4>
+      </div>
+      <div class="modal-body clearfix">
+        <div class="modal-body_img"><img src="images/pic-2.png" alt=""></div>
+        <div class="modal-body_name">
+          <h5>lorem ipsum dolor sit</h5>
+        </div>
+      </div>
+      <div class="modal-footer"><a class="btn" href="#">Перейти в корзину</a><a class="btn" href="#">Продолжить покупку</a></div>
+    </div>
+  </div>
+</div>
+  <script type="text/javascript" src="js/bundle.js"></script></body>
+</html>

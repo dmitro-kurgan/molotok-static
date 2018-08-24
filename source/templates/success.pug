@@ -1,0 +1,16 @@
+#SuccessAdd.modal.fade(role='dialog')
+  .modal-dialog
+    .modal-content
+      .modal-header
+        button.close(type='button', data-dismiss='modal')
+        .modal-header_icon
+          img(src=require("../components/images/ok-turq.png"), alt="")
+        h4.modal-title Продукт добавлен в корзину
+      .modal-body.clearfix
+        .modal-body_img
+          img(src=require('../components/images/pic-2.png'), alt='')
+        .modal-body_name
+          h5 lorem ipsum dolor sit
+      .modal-footer
+        a(href="#").btn Перейти в корзину
+        a(href="#").btn Продолжить покупку

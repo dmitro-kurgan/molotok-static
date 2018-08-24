@@ -1,0 +1,335 @@
+header
+	.header#header
+		.header_mob#headerMob
+			.header_mob_content#headerMobContent
+				.header_mob_top.clearfix#headerMobTop
+					.container
+
+				.header_mob_mid#headerMobMid
+					.container
+						.header_mob_logo#headerMobLogo
+						.header_mob_cart.clearfix#headerMobCart
+						.header_mob_cartInner#headerMobCartInner
+						.header_mob_search#headerMobSearch
+				.header_mob_bottom.clearfix#headerMobBottom
+					.container
+						.menu#mobDropdown Каталог
+						.header_mob_tel#headerMobTel
+						.header_hamburger
+							span.top
+							span.mid
+							span.bottom
+					#headerMobDropdown
+			.header_mob_menu-hid#headerMobMenuHid
+				.close
+				.header_mob_menu#headerMobMenu
+				
+				.header_mob_socials.clearfix#headerMobSocials
+		.header_top#headerTop
+			.container
+				.row
+					.col-sm-6
+						#headerTel
+							.header_tel
+								span.fa.fa-phone#headerPhone
+								ul.clearfix
+									li
+										a(href='tel:+380686313415') (068) 631-34-15
+									li
+										a(href='tel:+380635508840') (063) 550 88 40
+									li
+										a(href='tel:+380505322868') (050) 532-28-68
+					.col-sm-6
+						#headerTopMenu
+							ul.header_top_menu
+								li.header_top_menu-list
+									a(href="enter.html") Мой аккаунт
+								li.header_top_menu-list
+									a(href="compare.html") Сравнение
+								li.header_top_menu-list.menu-item-has-children.language
+									img(src=require('../components/images/ukraine.svg'), alt="")
+									a(href="#")#langUkr Українська
+									.sub-menu
+										ul
+											//- li
+											//- 	a(href="#")
+													
+											//- 		p#langEng English
+											//- 		img(src=require('../components/images/usa.svg'), alt="")
+											li
+												a(href="#")
+													
+													p#langRus Русский
+													img(src=require('../components/images/rus.svg'), alt="")
+								li.header_top_menu-list.menu-item-has-children
+									a(href="#").header_city#headerCity г. Харьков
+									.sub-menu
+										ul
+											li
+												a(href="#") г. Киев
+											li
+												a(href="#") г. Одесса
+		.header_main#headerMain
+			.container
+				.row
+					.col-sm-1
+						.header_main_left
+							#headerSocials
+								ul.header_main_socials
+									li
+										a(href="#").fa.fa-facebook
+									li
+										a(href="#").fa.fa-twitter
+									li
+										a(href="#", style='font-weight: 700').fa.fa-instagram
+									li
+										a(href="#").fa.fa-youtube-play
+					.col-sm-10
+						.header_main_center
+							#headerDropdownWrapper
+								.header_dropdown#headerDropdown
+									.header_dropdown_inner
+										.row
+											.col-xs-6
+												.header_dropdown_left
+													h5 Категории
+													.header_dropdown_nav
+														ul.nav.nav-pills
+															li.active
+																a(data-toggle='pill', href='#tabHeader') АКЦИИ
+															li
+																a(data-toggle='pill', href='#tabHeader2') Общестроительные материалы
+															li
+																a(data-toggle='pill', href='#tabHeader3') Отделочные материалы
+															li
+																a(data-toggle='pill', href='#tabHeader4') Сухие смеси
+															li
+																a(data-toggle='pill', href='#tabHeader5') Тепло-звукоизоляция
+															li
+																a(data-toggle='pill', href='#tabHeader6') Пиломатериалы
+															li
+																a(data-toggle='pill', href='#tabHeader7') Лакокрасочные материалы
+															li
+																a(data-toggle='pill', href='#tabHeader8') Двери
+															li
+																a(data-toggle='pill', href='#tabHeader9') Инструменты
+															li
+																a(data-toggle='pill', href='#tabHeader10') Электроинструмент
+															li
+																a(data-toggle='pill', href='#tabHeader11') Напольные покрытия
+															li
+																a(data-toggle='pill', href='#tabHeader12') Кровля
+															li
+																a(data-toggle='pill', href='#tabHeader13') Сайдинг/софит
+															li
+																a(data-toggle='pill', href='#tabHeader14') Строительная химия
+															li
+																a(data-toggle='pill', href='#tabHeader15') Электротовары
+															li
+																a(data-toggle='pill', href='#tabHeader16') Сантехника	
+											.col-xs-6
+												.header_dropdown_right
+													.tab-content
+														#tabHeader.tab-pane.fade.in.active
+															#accordionHeader.panel-group
+																h6 Акции
+																ul
+																	li
+																		a(href="category.html") Металлочерепица
+																	li
+																		a(href="category.html") Кровельные пленки
+																	li
+																		a(href="category.html") Плоский и волновой шифер
+																	li
+																		a(href="category.html") Кровельные пленки
+																	li
+																		a(href="category.html") Все для кровли
+																	li.panel.panel-default
+																		a(data-toggle='collapse', data-parent='#accordionHeader', href='#collapseHeader', aria-expanded="true").panel_link Профнастил
+																		#collapseHeader.panel-collapse.collapse
+																			.panel-body
+																				ul
+																					li
+																						a(href="category.html") Все для кровли
+																					li
+																						a(href="category.html") Битумная черепица
+																					li
+																						a(href="category.html") Водосточная система
+																ul
+																	li
+																		a(href="category.html") Водосточная система
+																	li
+																		a(href="category.html") Рубероид
+																	li
+																		a(href="category.html") Битумная черепица
+																	li
+																		a(href="category.html") Водосточная система
+																	li
+																		a(href="category.html") Битумная мастика/Праймер
+																	li
+																		a(href="category.html") Все для кровли
+														#tabHeader2.tab-pane.fade
+															#accordionHeader2.panel-group
+																h6 Общестроительные материалы
+																ul
+																	li
+																		a(href="category.html") Все для кровли
+																	li
+																		a(href="category.html") Кровельные пленки
+																	li.panel.panel-default
+																		a(data-toggle='collapse', data-parent='#accordionHeader2', href='#collapseHeader2', aria-expanded="true").panel_link Профнастил
+																		#collapseHeader2.panel-collapse.collapse
+																			.panel-body
+																				ul
+																					li
+																						a(href="category.html") Все для кровли
+																					li
+																						a(href="category.html") Битумная черепица
+																					li
+																						a(href="category.html") Водосточная система
+																	li
+																		a(href="category.html") Плоский и волновой шифер
+																	li
+																		a(href="category.html") Кровельные пленки
+																	li
+																		a(href="category.html") Металлочерепица
+																ul
+																	li
+																		a(href="category.html") Все для кровли
+																	li
+																		a(href="category.html") Рубероид
+																	li
+																		a(href="category.html") Водосточная система
+																	li
+																		a(href="category.html") Битумная черепица
+																	li
+																		a(href="category.html") Битумная мастика/Праймер
+																	li
+																		a(href="category.html") Водосточная система
+														#tabHeader3.tab-pane.fade
+															#accordionHeader2.panel-group
+																h6 Отделочные материалы
+																ul
+																	li
+																		a(href="category.html") Рубероид
+																	li
+																		a(href="category.html") Кровельные пленки
+																	li
+																		a(href="category.html") Все для кровли
+																	li
+																		a(href="category.html") Плоский и волновой шифер
+																	li
+																		a(href="category.html") Металлочерепица
+																	li
+																		a(href="category.html") Кровельные пленки	
+																ul
+																	li
+																		a(href="category.html") Битумная мастика/Праймер
+																	li
+																		a(href="category.html") Все для кровли
+																	li
+																		a(href="category.html") Водосточная система
+																	li
+																		a(href="category.html") Водосточная система
+																	li
+																		a(href="category.html") Битумная черепица
+																	li.panel.panel-default
+																		a(data-toggle='collapse', data-parent='#accordionHeader3', href='#collapseHeader3', aria-expanded="true").panel_link Профнастил
+																		#collapseHeader3.panel-collapse.collapse
+																			.panel-body
+																				ul
+																					li
+																						a(href="category.html") Все для кровли
+																					li
+																						a(href="category.html") Битумная черепица
+																					li
+																						a(href="category.html") Водосточная система
+							#headerMainMenuLeft
+								.header_main_menu.header_main_menu--left
+									ul
+										li.current-menu-item
+											a(href="./") Главная
+										li
+											a(href="#")#dropdown.menu-catalog Каталог
+											//- .header_mob_dropdown
+										li
+											a(href="cart.html") Корзина
+										li
+											a(href="enter.html") Кабинет
+										li
+											a(href="company.html") О компании
+							#headerLogo.header_logo-wrapper
+								.header_logo
+									a(style='background-image:url(' + require('../components/images/logo.svg') + ')', href="./")
+									p.header_slogan.
+										С нами вы сможете больше!
+							#headerMainMenuRight
+								.header_main_menu.header_main_menu--right
+									ul
+										li
+											a(href="delivery.html") Оплата и доставка
+										li
+											a(href="contacts.html") Контакты
+										li
+											a(href="search.html") Поиск
+										li
+											a(href="blog.html") Блог
+										li
+											a(href="delivery.html") Прайс
+					.col-sm-1
+						.header_main_right
+							.header_search#headerSearch
+
+								form
+									input.form-control#searchInput(type='text', name='search', placeholder='Поиск...')
+									a(href="#")#searchIcon.fa.fa-search
+									button(type="submit")
+							.header_cart#headerCart
+								a(href="#").fa.fa-shopping-cart
+									.header_cart_circle
+										.header_cart_num 2
+							.header_cart_inner#headerCartInner
+								.header_cart_top
+									h4.header_cart_title
+										| У вас есть 
+										span 
+											| 2 товара 
+										| в корзине
+								.header_cart_main
+									.header_cart_box.clearfix
+										.header_cart_box_left
+											.header_cart_img
+												img(src=require("../components/images/pic-2.png"), alt="")
+										.header_cart_box_right
+											h5.header_cart_name Here product name
+											div.header_cart_info
+												p.header_cart_cost
+													| Цена: 
+													span 200 грн
+												p.header_cart_quantity
+													| Количество: 
+													span 02
+											a(href="#").header_cart_del
+												span.close
+									.header_cart_box.clearfix
+										.header_cart_box_left
+											.header_cart_img
+												img(src=require("../components/images/pic-2.png"), alt="")
+										.header_cart_box_right
+											h5.header_cart_name Here product name
+											div.header_cart_info
+												p.header_cart_cost
+													| Цена: 
+													span 200 грн
+												p.header_cart_quantity
+													| Количество: 
+													span 02
+											a(href="#").header_cart_del
+												span.close
+								.header_cart_bottom
+									.header_cart_total
+										p Всего
+										span 800.00 грн
+									.header_cart_btns
+										a(href="cart.html").btn.to-card Перейти в корзину
+										a(href="cart.html").btn.check-out Оформить заказ

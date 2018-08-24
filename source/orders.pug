@@ -1,0 +1,70 @@
+extends ./templates/base
+
+block title
+	title Orders
+block main
+	include ./templates/header
+	section.breadcrumb
+		.container_content
+			ul.clearfix
+				li
+					a(href='./') Главная
+				li
+					a(href='enter.html') Заказы клиента
+	.content.content--orders
+		.container_content
+				section.orders
+					.orders_top.clearfix
+						div.back-wrapper
+							a.back(href="", onclick='javascript:history.back(); return false;') Вернуться в список заказов
+						p.order Заказ №
+							span 
+								| 5732727227
+						p.status Статус: 
+							span
+								| оформление заказа
+					.orders_block
+						.table-responsive
+							table.table
+								thead
+									tr
+										td Продукт
+										td Цена
+										td Количество
+										td Всего
+								tbody
+									tr
+										td 
+											div
+												.orders_block_img
+													img(src=require("./components/images/pic-1.png"), alt="")
+												span
+													| Product name here
+										td 60.00 грн
+										td 1
+										td 120.00 грн
+									tr
+										td 
+											div
+												.orders_block_img
+													img(src=require("./components/images/pic-2.png"), alt="")
+												span
+													| Product name here
+										td 60.00 грн
+										td 1
+										td 120.00 грн
+									tr
+										td 
+											div
+												img(src=require("./components/images/pic-4.png"), alt="")
+												span
+													| Product name here
+										td 60.00 грн
+										td 1
+										td 120.00 грн
+					p.total Всего к оплате: 
+						span 
+							| 360 грн
+	include ./templates/footer
+	include ./templates/buy-oneclick
+	include ./templates/success

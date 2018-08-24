@@ -1,0 +1,291 @@
+extends ./templates/base
+
+block title
+	title Product page
+
+block main
+	include ./templates/header 
+	section.breadcrumb
+		.container_content
+			ul.clearfix
+				li
+					a(href='./') Главная
+				li
+					a(href='#') Каталог товаров
+				li
+					a(href='product-pg.html') Страница товара
+	.content.content--product-pg
+		.container_content
+			section.product-pg
+				.product-pg_block
+					.row
+						.col-sm-5
+							.product-pg_left#sliderForBlock
+								.slider.slick-for#productSliderFor
+									mixin sliderfor(name)
+										div
+											.slick-for_box
+												.product-pg_sale
+													.slick-for_img(style='background-image: url(' + require('./components/images/' + name) + ')')
+									+sliderfor('ceresit-pic-2.jpg')
+									+sliderfor('ceresit-pic-1.jpg')
+									//- +sliderfor('pic-2.png')
+									//- +sliderfor('pic-1.png')
+									//- +sliderfor('pic-1.png')
+									//- +sliderfor('pic-1.png')
+						.col-sm-7
+							.product-pg_right
+								.product-pg_top
+									div.clearfix
+										h3.product-pg_name клей для плитки ceresit cm-11 (25 кг)
+										.product-pg_rating.product-pg_rating--3
+											.product-pg_total (отзывов: 3)
+											.product-pg_rating_stars
+												span.product-pg_rating_star ☆
+												span.product-pg_rating_star ☆
+												span.product-pg_rating_star ☆
+												span.product-pg_rating_star ☆
+												span.product-pg_rating_star ☆
+									div.clearfix
+										.product-pg_price 103.00 грн
+										.product-pg_price.product-pg_price-old 109.90 грн
+									div
+										.product-pg_stock
+											span.yes 
+												| В наличии
+								.product-pg_main
+									.product-pg_txt
+										p.
+											Клей для тонкослойного крепления керамических плиток при внутренних и наружных работах
+									div
+										.product-pg_product-code
+											p
+												| Код товара: 
+												span
+													| 1234
+										a(href="#", data-toggle="modal", data-target="#BuyModal").buy-oneclick Купить в один клик
+									div
+										.product-pg_quantity
+											span.plus +
+											input.input(value='1', type='')
+											span.minus -
+										.product-pg_buy.clearfix
+											ul
+												li
+													span
+														a(href="#")
+												li
+													span
+														a(href="#")
+								.product-pg_bottom#sliderNavBlock
+									.slider.slick-nav#productSliderNav
+										mixin slidernav(name)
+											div
+												.slick-nav_box
+													.slick-nav_img(style='background-image: url(' + require('./components/images/' + name) + ')')
+										+slidernav('ceresit-pic-2.jpg')
+										+slidernav('ceresit-pic-1.jpg')
+										//- +slidernav('pic-2.png')
+										//- +slidernav('pic-1.png')
+										//- +slidernav('pic-1.png')
+										//- +slidernav('pic-1.png')
+				.product-pg_tabs
+					.row
+						.col-sm-3
+							.product-pg_tabs_left
+								.product-pg_nav-menu
+									ul.nav.nav-tabs1.nav-pills#nav-tabs
+										li.active
+											a(data-toggle='pill', href='#tab1') Описание
+										li
+											a(data-toggle='pill', href='#tab3') Характеристики
+										li
+											a(data-toggle='pill', href='#tab2') Отзывы
+										li
+											a(data-toggle='pill', href='#tab4') Доставка
+						.col-sm-9
+							.product-pg_tabs_right
+								.product-pg_tab-content
+									.tab-content
+										#tab1.tab-pane.fade.in.active
+											.product-pg_delivery.description
+												.product-pg_delivery_name Клей для плитки ceresit CM-11 (25 кг)
+												h6 Свойства:
+												ol
+													li Водостойкий
+													li Морозостойкий
+													li Технологичный
+													li Устойчивый на вертикальных поверхностях
+													li Не горючий
+												h6 Область применения:
+												p
+													| Клей Ceresit СМ 11 предназначен для устройства плиточных облицовок на стенах и полах из впитывающих и слабо впитывающих (водопоглощение более 3%) керамических, каменно-керамических и каменных плиток, в гражданском и промышленном строительстве при наружных и внутренних работах, в т.ч. для эксплуатации во влажных помещениях. Толщина клеевого слоя при его использовании должна составлять от 2 до 10 мм.
+													| Ceresit СМ 11 применяется также для устройства плиточных облицовок в небольших закрытых бассейнах. Крепление плитки в этом случае осуществляют не ранее чем через 3 суток после нанесения гидроизоляции Ceresit СR 65.
+													| Дополнительное введение в Ceresit СМ 11 эластификатора Ceresit СС 83 позволяет его использовать для крепления плиток, в т.ч. с водопоглощением менее 1%:
+													strong
+												ul
+													li на деформирующиеся основания, например, гипсокартонные и стружечные плиты, обогреваемые полы;
+													li на деформирующиеся основания, например, гипсокартонные и стружечные плиты, обогреваемые полы;
+													li на прочные и имеющие хорошую адгезию малярные покрытия;
+													li на гипсовые и ангидритные основания;
+													li на ячеистый и «молодой» бетон (имеющий „возраст“ не менее 3 месяцев).
+													li на террасах, балконах, наружных лестницах, а также в наружных бассейнах и резервуарах;
+													li на существующие керамические облицовки;
+										#tab2.tab-pane.fade
+											.product-pg_comments
+												.product-pg_comments_title
+													h2 Отзывы клиентов
+												.product-pg_comments_block.clearfix
+													.product-pg_comments_box.clearfix
+														.product-pg_rating.product-pg_rating--3
+															span.product-pg_rating_star ☆
+															span.product-pg_rating_star ☆
+															span.product-pg_rating_star ☆
+															span.product-pg_rating_star ☆
+															span.product-pg_rating_star ☆
+														.product-pg_comments_inner.clearfix
+															.product-pg_comments_left
+																.product-pg_comments_name Тим Берглинг
+																.product-pg_comments_data 03 Января, 2018
+															.product-pg_comments_right
+																p.
+																	Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas pretium orci at congue tincidunt. Phasellus vel ullamcorper magna. Duis sit amet hendrerit lorem. Morbi lobortis dolor sem, vel aliquet nisi sollicitudin id. Vestibulum non porttitor magna, id ultricies ante. Donec lacus nisi, scelerisque ut efficitur ut, bibendum quis nulla.
+													.product-pg_comments_box.clearfix
+														.product-pg_rating.product-pg_rating--4
+															span.product-pg_rating_star ☆
+															span.product-pg_rating_star ☆
+															span.product-pg_rating_star ☆
+															span.product-pg_rating_star ☆
+															span.product-pg_rating_star ☆
+														.product-pg_comments_inner.clearfix
+															.product-pg_comments_left
+																.product-pg_comments_name Тим Берглинг
+																.product-pg_comments_data 03 Января, 2018
+															.product-pg_comments_right
+																p.
+																	Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas pretium orci at congue tincidunt. Phasellus vel ullamcorper magna. Duis sit amet hendrerit lorem. Morbi lobortis dolor sem, vel aliquet nisi sollicitudin id. Vestibulum non porttitor magna, id ultricies ante. Donec lacus nisi, scelerisque ut efficitur ut, bibendum quis nulla.
+												.product-pg_comments_title 
+													h2 Оставьте свой отзыв
+												.product-pg_comments_rating
+													h3 Ваш рейтинг
+													ul.clearfix
+														li
+															a(href="#")
+																.product-pg_rating
+																	.product-pg_rating_stars
+																		span.product-pg_rating_star ☆
+														li
+															a(href="#")
+																.product-pg_rating
+																	.product-pg_rating_stars
+																		span.product-pg_rating_star ☆
+																		span.product-pg_rating_star ☆
+														li
+															a(href="#")
+																.product-pg_rating
+																	.product-pg_rating_stars
+																		span.product-pg_rating_star ☆
+																		span.product-pg_rating_star ☆
+																		span.product-pg_rating_star ☆
+														li
+															a(href="#")
+																.product-pg_rating
+																	.product-pg_rating_stars
+																		span.product-pg_rating_star ☆
+																		span.product-pg_rating_star ☆
+																		span.product-pg_rating_star ☆
+																		span.product-pg_rating_star ☆
+														li
+															a(href="#")
+																.product-pg_rating
+																	.product-pg_rating_stars
+																		span.product-pg_rating_star ☆
+																		span.product-pg_rating_star ☆
+																		span.product-pg_rating_star ☆
+																		span.product-pg_rating_star ☆
+																		span.product-pg_rating_star ☆
+													form
+														.row
+															.form-group.col-sm-6
+																input.form-control(type='text', name='name', placeholder='Ваше имя', required)
+															.form-group.col-sm-6
+																input.form-control(type='email', name='email', placeholder='Ваш e-mail', required)
+														.form-group
+															textarea.form-control(type='text', name='message', placeholder='Ваш комментарий', rows='5')
+														button.btn.turq-btn(type='submit') Оставить отзыв
+
+										#tab3.tab-pane.fade
+											.product-pg_char
+												table.table.table-bordered
+													tbody
+														tr
+															td 
+																h6 Производитель
+															td 
+																p Технониколь
+														tr
+															td 
+																h6 Вес
+															td
+																p.
+																	25 кг
+														tr
+															td 
+																h6 Состав
+															td 
+																p.
+																	Смесь цемента с минеральными наполнителями и модификаторами
+														tr
+															td 
+																h6 Требуемое кол-во воды затворения
+															td 
+																p.
+																	1,2 л воды на 5 кг сухой смеси
+														tr
+															td 
+																h6 Время потребления
+															td 
+																p.
+																	до 2 часов
+														tr
+															td 
+																h6 Температура основания
+															td 
+																p.
+																	от + 5°C до + 30°C
+														tr
+															td 
+																h6 Сползание плитки
+															td 
+																p.
+																	менее 0,1 мм
+														tr
+															td 
+																h6 Затирка швов
+															td 
+																p.
+																	через 24 часов
+														tr
+															td 
+																h6 Теплостойкость
+															td 
+																p.
+																	от — 50°C до + 70°C
+														tr
+															td 
+																h6 Расход, кг/м
+															td 
+																p.
+																	от 2 до 7,8 кг.
+										#tab4.tab-pane.fade
+											.product-pg_delivery
+												.product-pg_delivery_name Клей для плитки ceresit CM-11 (25 кг)
+												p.
+													Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eget purus diam. In finibus mi et malesuada fermentum. Etiam a lacinia nulla. Praesent commodo leo a elit venenatis rutrum. Aenean consequat quam tincidunt sem tempor, a varius urna suscipit. Aenean tempus mi id finibus sollicitudin. Donec tempus purus turpis, at dictum lorem pellentesque sed. Sed a rhoncus mauris. Donec ultricies erat nec vehicula consequat.
+												p.
+													Curabitur luctus eros justo, eget mattis ligula gravida congue. Pellentesque a vestibulum erat, id ultricies ante. Quisque nulla tellus, rutrum et nisl ac, auctor blandit tellus. Quisque tristique rhoncus dui in dapibus. Sed dui eros, dictum gravida egestas vel, rhoncus ut nisl. Praesent gravida nibh ac interdum molestie. Vivamus purus ex, facilisis a ligula ac, luctus feugiat nunc. Etiam orci diam, blandit a dui quis, ultricies molestie ligula. Quisque iaculis scelerisque magna, vel semper enim.
+			include ./templates/recomended
+			include ./templates/viewed
+	include ./templates/footer
+	include ./templates/buy-oneclick
+	include ./templates/success

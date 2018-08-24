@@ -1,0 +1,111 @@
+extends ./templates/base
+
+block title
+	title Pay & Delivery
+
+block main
+	include ./templates/header 
+	section.breadcrumb
+		.container_content
+			ul.clearfix
+				li
+					a(href='./') Главная
+				li
+					a(href='delivery.html') Оплата и доставка
+	.content.content--pay-delivery
+		.container_content
+			section.delivery
+				.row
+					.col-sm-3
+						.delivery_left
+							.delivery_nav-menu
+								ul.nav.nav-tabs1.nav-pills#nav-tabs
+									li.active
+										a(data-toggle='pill', href='#tab1') Оплата и доставка
+									li
+										a(data-toggle='pill', href='#tab2') Прайс
+					.col-sm-9
+						.delivery_right
+							.delivery_tab-content
+								.tab-content
+									#tab1.tab-pane.fade.in.active
+										#accordion.panel-group
+											.panel.panel-default
+												.panel-heading
+													h4.panel-title
+														a(data-toggle='collapse', data-parent='#accordion', href='#collapse1', aria-expanded="true").
+															Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eget dui elementum, accum
+												#collapse1.panel-collapse.collapse.in
+													.panel-body
+														p.
+															Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eget dui elementum, accumsan nisl ac, consectetur tellus. Suspendisse consequat orci id dui dictum, id egestas justo consequat. Phasellus tellus urna, eleifend quis arcu eu, ultricies mattis lacus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus fringilla, dolor id consequat condimentum, augue leo facilisis velit, consequat maximus ipsum massa quis ante. Pellentesque a massa id magna aliquet sodales. Donec a rhoncus purus, vel tempor mi. Mauris at molestie elit, non commodo velit.
+											.panel.panel-default
+												.panel-heading
+													h4.panel-title
+														a(data-toggle='collapse', data-parent='#accordion', href='#collapse2', aria-expanded="false").
+															Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eget dui elementum, accum
+												#collapse2.panel-collapse.collapse
+													.panel-body
+														p.
+															Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eget dui elementum, accumsan nisl ac, consectetur tellus. Suspendisse consequat orci id dui dictum, id egestas justo consequat. Phasellus tellus urna, eleifend quis arcu eu, ultricies mattis lacus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus fringilla, dolor id consequat condimentum, augue leo facilisis velit, consequat maximus ipsum massa quis ante. Pellentesque a massa id magna aliquet sodales. Donec a rhoncus purus, vel tempor mi. Mauris at molestie elit, non commodo velit.
+											.panel.panel-default
+												.panel-heading
+													h4.panel-title
+														a(data-toggle='collapse', data-parent='#accordion', href='#collapse3', aria-expanded="false").
+															Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eget dui elementum, accum
+												#collapse3.panel-collapse.collapse
+													.panel-body
+														p.
+															Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eget dui elementum, accumsan nisl ac, consectetur tellus. Suspendisse consequat orci id dui dictum, id egestas justo consequat. Phasellus tellus urna, eleifend quis arcu eu, ultricies mattis lacus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus fringilla, dolor id consequat condimentum, augue leo facilisis velit, consequat maximus ipsum massa quis ante. Pellentesque a massa id magna aliquet sodales. Donec a rhoncus purus, vel tempor mi. Mauris at molestie elit, non commodo velit.
+											.panel.panel-default
+												.panel-heading
+													h4.panel-title
+														a(data-toggle='collapse', data-parent='#accordion', href='#collapse4', aria-expanded="false").
+															Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eget dui elementum, accum
+												#collapse4.panel-collapse.collapse
+													.panel-body
+														p.
+															Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eget dui elementum, accumsan nisl ac, consectetur tellus. Suspendisse consequat orci id dui dictum, id egestas justo consequat. Phasellus tellus urna, eleifend quis arcu eu, ultricies mattis lacus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus fringilla, dolor id consequat condimentum, augue leo facilisis velit, consequat maximus ipsum massa quis ante. Pellentesque a massa id magna aliquet sodales. Donec a rhoncus purus, vel tempor mi. Mauris at molestie elit, non commodo velit.
+									#tab2.tab-pane.fade
+										#accordion2.panel-group
+											.panel.panel-default
+												.panel-heading
+													h4.panel-title
+														a(data-toggle='collapse', data-parent='#accordion2', href='#collapse5', aria-expanded="true").
+															Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eget dui elementum, accum
+												#collapse5.panel-collapse.collapse.in
+													.panel-body
+														p.
+															Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eget dui elementum, accumsan nisl ac, consectetur tellus. Suspendisse consequat orci id dui dictum, id egestas justo consequat. Phasellus tellus urna, eleifend quis arcu eu, ultricies mattis lacus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus fringilla, dolor id consequat condimentum, augue leo facilisis velit, consequat maximus ipsum massa quis ante. Pellentesque a massa id magna aliquet sodales. Donec a rhoncus purus, vel tempor mi. Mauris at molestie elit, non commodo velit.
+											.panel.panel-default
+												.panel-heading
+													h4.panel-title
+														a(data-toggle='collapse', data-parent='#accordion2', href='#collapse6', aria-expanded="false").
+															Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eget dui elementum, accum
+												#collapse6.panel-collapse.collapse
+													.panel-body
+														p.
+															Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eget dui elementum, accumsan nisl ac, consectetur tellus. Suspendisse consequat orci id dui dictum, id egestas justo consequat. Phasellus tellus urna, eleifend quis arcu eu, ultricies mattis lacus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus fringilla, dolor id consequat condimentum, augue leo facilisis velit, consequat maximus ipsum massa quis ante. Pellentesque a massa id magna aliquet sodales. Donec a rhoncus purus, vel tempor mi. Mauris at molestie elit, non commodo velit.
+											.panel.panel-default
+												.panel-heading
+													h4.panel-title
+														a(data-toggle='collapse', data-parent='#accordion2', href='#collapse7', aria-expanded="false").
+															Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eget dui elementum, accum
+												#collapse7.panel-collapse.collapse
+													.panel-body
+														p.
+															Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eget dui elementum, accumsan nisl ac, consectetur tellus. Suspendisse consequat orci id dui dictum, id egestas justo consequat. Phasellus tellus urna, eleifend quis arcu eu, ultricies mattis lacus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus fringilla, dolor id consequat condimentum, augue leo facilisis velit, consequat maximus ipsum massa quis ante. Pellentesque a massa id magna aliquet sodales. Donec a rhoncus purus, vel tempor mi. Mauris at molestie elit, non commodo velit.
+											.panel.panel-default
+												.panel-heading
+													h4.panel-title
+														a(data-toggle='collapse', data-parent='#accordion2', href='#collapse8', aria-expanded="false").
+															Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eget dui elementum, accum
+												#collapse8.panel-collapse.collapse
+													.panel-body
+														p.
+															Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eget dui elementum, accumsan nisl ac, consectetur tellus. Suspendisse consequat orci id dui dictum, id egestas justo consequat. Phasellus tellus urna, eleifend quis arcu eu, ultricies mattis lacus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus fringilla, dolor id consequat condimentum, augue leo facilisis velit, consequat maximus ipsum massa quis ante. Pellentesque a massa id magna aliquet sodales. Donec a rhoncus purus, vel tempor mi. Mauris at molestie elit, non commodo velit.
+			include ./templates/recomended
+			include ./templates/viewed
+	include ./templates/footer
+	include ./templates/buy-oneclick
+	include ./templates/success

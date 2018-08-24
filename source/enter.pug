@@ -1,0 +1,38 @@
+extends ./templates/base
+
+block title
+	title Log In
+block main
+	include ./templates/header
+	section.breadcrumb
+		.container_content
+			ul.clearfix
+				li
+					a(href='./') Главная
+				li
+					a(href='enter.html') Регистрация
+	.content.content--enter
+		.container_content
+				section.account
+					h2 Личный кабинет
+					.account_block
+						.row
+							.col-sm-6
+								.account_left
+									h3 Войти
+									p Уже есть аккаунт? Выполните вход, заполнив поля.
+									form.clearfix
+										.form-group
+											input.form-control#email(type='email', placeholder='E-mail', required) 
+										.form-group
+											input.form-control#pwd(type='password', placeholder='Пароль', required) 
+										a.forgot(href="#") Забыли пароль?
+										a.btn.turq-btn(href="#") Войти
+							.col-sm-6
+								.account_right
+									h4 Зарегистрироваться
+									p Создание учетной записи имеет много преимуществ: отслеживать заказы и многое другое.
+									a.btn(href="registration.html") Создать аккаунт
+	include ./templates/footer
+	include ./templates/buy-oneclick
+	include ./templates/success

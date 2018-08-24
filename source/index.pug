@@ -1,0 +1,228 @@
+extends ./templates/base
+
+block title
+	title Index
+
+block main
+	.wrapper.wrapper--index
+		include ./templates/header
+		.banner
+			.container
+				.banner_top
+					.slider.slider-top
+						mixin sliderTop(img)
+							div
+								a(href="#").slider-top_box
+									img(src=require('./components/images/banner-' + img + '.jpg'), alt="")
+						+sliderTop('1')
+						+sliderTop('1')
+						+sliderTop('1')
+			.container
+				.row
+					.banner_left.col-sm-4
+						.slider-vertical
+							mixin sliderVertical(sticker, price, img, text, text2, link)
+								div
+									.banner_box.banner_box--sm
+										.banner_box_top
+											.sticker.sticker-new= sticker
+											p.price= price
+										.banner_box_mid
+											.banner_box_img(style='background-image: url(' + require('./components/images/' + img + '.png') + ')')
+										.banner_box_bottom
+											.banner_box_name
+												h6= text
+												p= text2
+											a(href= link).btn.turq-btn.buy Купить
+							+sliderVertical('New', '60.00 грн', '223456', 'Адгезионная грунтовка Полимин', 'Грунты', '#')
+							+sliderVertical('New', '', 'knauf_beto_01', 'Грунтовка Бетоноконтакт KNAUF (5 л)', 'Полимерная грунтовка', '#')
+							+sliderVertical('New', '60.00 грн', '223456', 'Адгезионная грунтовка Полимин', 'Грунты', '#')
+							+sliderVertical('New', '', 'knauf_beto_01', 'Грунтовка Бетоноконтакт KNAUF (5 л)', 'Полимерная грунтовка', '#')
+					.banner_right.col-sm-8
+						.banner_box.banner_box--lg
+							.slider.slider-banner
+								//- mixin sliderbanner(pic, text1, text2, text3, textmain, buttonlink, buttonoffer)
+								mixin sliderbanner(pic, text1, text2, oldprice, price)
+									div
+										.slider-banner_box
+											.slider-banner_box-left
+												.slider-banner_box-img(style='background-image: url(' + require('./components/images/' + pic) + ')')
+											.slider-banner_box-right
+												.slider-banner_box-info
+													span= text1
+													h2= text2
+													p.slider-banner_box-oldprice= oldprice
+													p.slider-banner_box-price= price
+													ul
+														li - защищает поверхность от влаги
+														li - увеличивает прочность оснований
+														li - улучшает сцепление отдельных материалов с основой
+														li - улучшает свойства строительных растворов
+													//- span=text3
+													//- p= textmain
+												a(class='btn main-btn', href='#') Купить
+								+sliderbanner('4345445.png', 'Грунтовка водорастворимая', 'AURA Aquastop-prof (1л)', '185.00 грн', '175.00 грн')
+								+sliderbanner('knauf_beto_01.png', 'Грунтовка водорастворимая', 'AURA Aquastop-prof (1л)', '175.00 грн', '165.00 грн')
+								+sliderbanner('223456.png', 'Грунтовка водорастворимая', 'AURA Aquastop-prof (1л)', '165.00 грн', '155.00 грн')
+								//- +sliderbanner('knauf_beto_01.png', 'Грунтовка водорастворимая', 'AURA Aquastop-prof (1л)', 'Gallery 2017', 'Защищает поверхность от влаги, увеличивает прочность оснований, улучшает сцепление отдельных материалов с основой, улучшает свойства строительных растворов.', '#', 'Купить')
+								//- +sliderbanner('223456.png', 'Грунтовка водорастворимая', 'AURA Aquastop-prof (1л)', 'Gallery 2017', 'Защищает поверхность от влаги, увеличивает прочность оснований, улучшает сцепление отдельных материалов с основой, улучшает свойства строительных растворов.', '#', 'Купить')
+		.content
+			.container_content
+				section.buy-it.clearfix
+					h2 Покупайте онлайн на «Molotok»
+					ul.buy-it_nav.nav.nav-pills
+						li.active
+							a(data-toggle='pill', href='#all') Все
+						li
+							a(data-toggle='pill', href='#latest') Новинки
+						li
+							a(data-toggle='pill', href='#bestsellers') Бестселлеры
+						li
+							a(data-toggle='pill', href='#stocks') Акции
+					.buy-it_content.tab-content#tab-content1
+						#all.tab-pane.fade.in.active
+							.buy-it_title
+								h3 Все
+							.row.slider.slick-buy-it
+								mixin goods(sticker, stickername, pic, name, text, price, saleclass, saleprice)
+									.col-sm-4.col-md-3
+										a(href="product-pg.html").buy-it_box
+											.buy-it_box_main
+												.buy-it_box_top
+													div(class='' + sticker)= stickername
+												.buy-it_box_img(style='background-image: url(' + require('./components/images/' + pic) + ')')
+											.buy-it_box_bottom
+												.buy-it_box_name
+													p= name
+												.buy-it_box_price
+													p(class='buy-it_box_cost')= price
+													p(class='' + saleclass)= saleprice
+											.buy-it_box_text.tip
+												p= text
+										.buy-it_panel.clearfix
+											ul
+												li
+													span
+														a(href="#")
+														.description
+															p В сравнение
+												li
+													span
+														a(href="#")
+														.description.one-click
+															p Купить в один клик
+												li
+													a(href="#") купить
+								+goods('','','1-br-aquamast.jpg','AQUAMAST МАСТИКА БИТУМНО-РЕЗИНОВАЯ (10КГ)', 'Холодная гидроизоляционная мастика на основе битума и дробленой резины. Для устройства кровельного покрытия.', '359 грн', '', '')
+								+goods('sticker sticker-new','New','Evroruberojd-HKP-768x1024.png','ОРЕОЛ-1 ЕВРОРУБЕРОИД ХПП 2,0 (15М2)', 'Битумно-полимерный материал для гидроизоляции класса Эконом. Для нижнего слоя мягкой кровли и гидроизоляции зданий', '380 грн.', 'buy-it_box_sale', '410 грн')
+								+goods('','','P25_L.jpg','ПОЛИМИН П-24 ЭЛАСТ-КЛЕЙ 25КГ', 'ПОЛИМИН П-24 эласт-клей  (для балконов и полов с электро и водным обогревом)', '259 грн', '', '')
+								+goods('','','1-osb-qsbosb-12-mm-1250-2500-krono-ukraina.jpg','OSB (ХАРЬКОВ) 2500*1250*10ММ', 'Ориентированно-стружечная плита (ОСП) — это многослойный (3-4 слоя) лист из древесной стружки, склеенной различными смолами с добавлением синтетического воска и борной кислоты.', '300 грн', '', '')
+								+goods('sticker sticker-new','New','ode.jpg','УТЕПЛИТЕЛЬ ODE ФОЛЬГИРОВАННЫЙ 50*1200*1000 12М2', 'Тепло- звукоизоляционный материал минерального происхождения Knauf Insulation 18м2', '475 грн', '', '')
+								+goods('sticker sticker-new','New','Stark_deltashlif_FS_110.png','ДЕЛЬТАШЛИФМАШИНА ВИБРАЦИОННАЯ STARK FS 110', 'Дельташлифмашина для шлифования древесины, пластмассы, металла, композиционных материалов. Может применяться для полировки поверхности мебели, если использовать мягкую ткань вместо наждачной бумаги.', '537 грн', 'buy-it_box_sale', '581 грн')
+								+goods('','','Elektrodrel-ID500new.png','ДРЕЛЬ БЕЗУДАРНАЯ STARK ID 500', 'Электродрель, предназначенная для сверления отверстий в древесине, металле и бетоне. Может использоваться как шуруповерт для завинчивания шурупов и нарезания резьбы.', '726 грн', 'buy-it_box_sale', '785.00 грн')
+								+goods('sticker sticker-new','New','1-mira3100-150x150.jpg','КЛЕЙ ДЛЯ ПЛИТКИ ЭЛАСТИЧНЫЙ MIRA 3100 UNIFIХ (СЕРЫЙ) 25 КГ', 'Клей для плитки Mira 3100 standardfix для облицовки керамической плиткой стен и полов внутри и снаружи помещений. Высокая степень адгезии', '260 грн', '', '')
+						#latest.tab-pane.fade
+							.buy-it_title
+								h3 Новинки
+							.row.slider.slick-buy-it
+								+goods('','','1-br-aquamast.jpg','AQUAMAST МАСТИКА БИТУМНО-РЕЗИНОВАЯ (10КГ)', 'Холодная гидроизоляционная мастика на основе битума и дробленой резины. Для устройства кровельного покрытия.', '359 грн', '', '')
+								+goods('sticker sticker-new','New','Evroruberojd-HKP-768x1024.png','ОРЕОЛ-1 ЕВРОРУБЕРОИД ХПП 2,0 (15М2)', 'Битумно-полимерный материал для гидроизоляции класса Эконом. Для нижнего слоя мягкой кровли и гидроизоляции зданий', '380 грн.', 'buy-it_box_sale', '410 грн')
+								+goods('','','P25_L.jpg','ПОЛИМИН П-24 ЭЛАСТ-КЛЕЙ 25КГ', 'ПОЛИМИН П-24 эласт-клей  (для балконов и полов с электро и водным обогревом)', '259 грн', '', '')
+								+goods('','','1-osb-qsbosb-12-mm-1250-2500-krono-ukraina.jpg','OSB (ХАРЬКОВ) 2500*1250*10ММ', 'Ориентированно-стружечная плита (ОСП) — это многослойный (3-4 слоя) лист из древесной стружки, склеенной различными смолами с добавлением синтетического воска и борной кислоты.', '300 грн', '', '')
+								+goods('sticker sticker-new','New','ode.jpg','УТЕПЛИТЕЛЬ ODE ФОЛЬГИРОВАННЫЙ 50*1200*1000 12М2', 'Тепло- звукоизоляционный материал минерального происхождения Knauf Insulation 18м2', '475 грн', '', '')
+								+goods('sticker sticker-new','New','Stark_deltashlif_FS_110.png','ДЕЛЬТАШЛИФМАШИНА ВИБРАЦИОННАЯ STARK FS 110', 'Дельташлифмашина для шлифования древесины, пластмассы, металла, композиционных материалов. Может применяться для полировки поверхности мебели, если использовать мягкую ткань вместо наждачной бумаги.', '537 грн', 'buy-it_box_sale', '581 грн')
+								+goods('','','Elektrodrel-ID500new.png','ДРЕЛЬ БЕЗУДАРНАЯ STARK ID 500', 'Электродрель, предназначенная для сверления отверстий в древесине, металле и бетоне. Может использоваться как шуруповерт для завинчивания шурупов и нарезания резьбы.', '726 грн', 'buy-it_box_sale', '785.00 грн')
+								+goods('sticker sticker-new','New','1-mira3100-150x150.jpg','КЛЕЙ ДЛЯ ПЛИТКИ ЭЛАСТИЧНЫЙ MIRA 3100 UNIFIХ (СЕРЫЙ) 25 КГ', 'Клей для плитки Mira 3100 standardfix для облицовки керамической плиткой стен и полов внутри и снаружи помещений. Высокая степень адгезии', '260 грн', '', '')
+						#bestsellers.tab-pane.fade
+							.buy-it_title
+								h3 Бестселлеры
+							.row.slider.slick-buy-it
+								+goods('','','1-br-aquamast.jpg','AQUAMAST МАСТИКА БИТУМНО-РЕЗИНОВАЯ (10КГ)', 'Холодная гидроизоляционная мастика на основе битума и дробленой резины. Для устройства кровельного покрытия.', '359 грн', '', '')
+								+goods('sticker sticker-new','New','Evroruberojd-HKP-768x1024.png','ОРЕОЛ-1 ЕВРОРУБЕРОИД ХПП 2,0 (15М2)', 'Битумно-полимерный материал для гидроизоляции класса Эконом. Для нижнего слоя мягкой кровли и гидроизоляции зданий', '380 грн.', 'buy-it_box_sale', '410 грн')
+								+goods('','','P25_L.jpg','ПОЛИМИН П-24 ЭЛАСТ-КЛЕЙ 25КГ', 'ПОЛИМИН П-24 эласт-клей  (для балконов и полов с электро и водным обогревом)', '259 грн', '', '')
+								+goods('','','1-osb-qsbosb-12-mm-1250-2500-krono-ukraina.jpg','OSB (ХАРЬКОВ) 2500*1250*10ММ', 'Ориентированно-стружечная плита (ОСП) — это многослойный (3-4 слоя) лист из древесной стружки, склеенной различными смолами с добавлением синтетического воска и борной кислоты.', '300 грн', '', '')
+								+goods('sticker sticker-new','New','ode.jpg','УТЕПЛИТЕЛЬ ODE ФОЛЬГИРОВАННЫЙ 50*1200*1000 12М2', 'Тепло- звукоизоляционный материал минерального происхождения Knauf Insulation 18м2', '475 грн', '', '')
+								+goods('sticker sticker-new','New','Stark_deltashlif_FS_110.png','ДЕЛЬТАШЛИФМАШИНА ВИБРАЦИОННАЯ STARK FS 110', 'Дельташлифмашина для шлифования древесины, пластмассы, металла, композиционных материалов. Может применяться для полировки поверхности мебели, если использовать мягкую ткань вместо наждачной бумаги.', '537 грн', 'buy-it_box_sale', '581 грн')
+								+goods('','','Elektrodrel-ID500new.png','ДРЕЛЬ БЕЗУДАРНАЯ STARK ID 500', 'Электродрель, предназначенная для сверления отверстий в древесине, металле и бетоне. Может использоваться как шуруповерт для завинчивания шурупов и нарезания резьбы.', '726 грн', 'buy-it_box_sale', '785.00 грн')
+								+goods('sticker sticker-new','New','1-mira3100-150x150.jpg','КЛЕЙ ДЛЯ ПЛИТКИ ЭЛАСТИЧНЫЙ MIRA 3100 UNIFIХ (СЕРЫЙ) 25 КГ', 'Клей для плитки Mira 3100 standardfix для облицовки керамической плиткой стен и полов внутри и снаружи помещений. Высокая степень адгезии', '260 грн', '', '')
+						#stocks.tab-pane.fade
+							.buy-it_title
+								h3 Акции
+							.row.slider.slick-buy-it
+								+goods('','','1-br-aquamast.jpg','AQUAMAST МАСТИКА БИТУМНО-РЕЗИНОВАЯ (10КГ)', 'Холодная гидроизоляционная мастика на основе битума и дробленой резины. Для устройства кровельного покрытия.', '359 грн', '', '')
+								+goods('sticker sticker-new','New','Evroruberojd-HKP-768x1024.png','ОРЕОЛ-1 ЕВРОРУБЕРОИД ХПП 2,0 (15М2)', 'Битумно-полимерный материал для гидроизоляции класса Эконом. Для нижнего слоя мягкой кровли и гидроизоляции зданий', '380 грн.', 'buy-it_box_sale', '410 грн')
+								+goods('','','P25_L.jpg','ПОЛИМИН П-24 ЭЛАСТ-КЛЕЙ 25КГ', 'ПОЛИМИН П-24 эласт-клей  (для балконов и полов с электро и водным обогревом)', '259 грн', '', '')
+								+goods('','','1-osb-qsbosb-12-mm-1250-2500-krono-ukraina.jpg','OSB (ХАРЬКОВ) 2500*1250*10ММ', 'Ориентированно-стружечная плита (ОСП) — это многослойный (3-4 слоя) лист из древесной стружки, склеенной различными смолами с добавлением синтетического воска и борной кислоты.', '300 грн', '', '')
+								+goods('sticker sticker-new','New','ode.jpg','УТЕПЛИТЕЛЬ ODE ФОЛЬГИРОВАННЫЙ 50*1200*1000 12М2', 'Тепло- звукоизоляционный материал минерального происхождения Knauf Insulation 18м2', '475 грн', '', '')
+								+goods('sticker sticker-new','New','Stark_deltashlif_FS_110.png','ДЕЛЬТАШЛИФМАШИНА ВИБРАЦИОННАЯ STARK FS 110', 'Дельташлифмашина для шлифования древесины, пластмассы, металла, композиционных материалов. Может применяться для полировки поверхности мебели, если использовать мягкую ткань вместо наждачной бумаги.', '537 грн', 'buy-it_box_sale', '581 грн')
+								+goods('','','Elektrodrel-ID500new.png','ДРЕЛЬ БЕЗУДАРНАЯ STARK ID 500', 'Электродрель, предназначенная для сверления отверстий в древесине, металле и бетоне. Может использоваться как шуруповерт для завинчивания шурупов и нарезания резьбы.', '726 грн', 'buy-it_box_sale', '785.00 грн')
+								+goods('sticker sticker-new','New','1-mira3100-150x150.jpg','КЛЕЙ ДЛЯ ПЛИТКИ ЭЛАСТИЧНЫЙ MIRA 3100 UNIFIХ (СЕРЫЙ) 25 КГ', 'Клей для плитки Mira 3100 standardfix для облицовки керамической плиткой стен и полов внутри и снаружи помещений. Высокая степень адгезии', '260 грн', '', '')
+				section.sale
+					.sale_box
+						.slider.slider-sale
+							div
+								.slider-sale_box
+									.slider-sale_inner.clearfix
+										.slider-sale_box_left
+											.slider-sale_box_circle 60.00 грн
+										.slider-sale_box_right
+											h3 Sale 50 % Off
+											p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus commodo pellentesque tincidunt. Pellentesque at consectetur lacus, nec mollis velit. elementum, enim ac
+											a(href="#").btn.turq-btn Shop Now
+							div
+								.slider-sale_box
+									.slider-sale_inner.clearfix
+										.slider-sale_box_left
+											.slider-sale_box_circle 60.00 грн
+										.slider-sale_box_right
+											h3 Sale 50 % Off
+											p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus commodo pellentesque tincidunt. Pellentesque at consectetur lacus, nec mollis velit. elementum, enim ac
+											a(href="#").btn.turq-btn Shop Now
+							div
+								.slider-sale_box
+									.slider-sale_inner.clearfix
+										.slider-sale_box_left
+											.slider-sale_box_circle 60.00 грн
+										.slider-sale_box_right
+											h3 Sale 50 % Off
+											p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus commodo pellentesque tincidunt. Pellentesque at consectetur lacus, nec mollis velit. elementum, enim ac
+											a(href="#").btn.turq-btn Shop Now
+				section.blog
+					h2 Последнее из Блога
+					.blog_box
+						.row
+							.col-sm-6.blog_box_inner
+								.blog_box_left.clearfix
+									.row
+										.col-xs-12.col-md-6.col-md-push-6
+											.blog_box_img(style='background-image: url(' + require('./components/images/blog-bg-1.jpg') + ')')
+										.col-xs-12.col-md-6.col-md-pull-6
+											.blog_box_data.clearfix
+												.day 18
+												span
+													.month december 2017
+													p Lorem ipsum dolor sit
+											p.blog_box_text.
+												Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phacommodo pellentesque tincidunt. 
+											a(href="#").read-more Read more
+							.col-sm-6.blog_box_inner
+								.blog_box_left.clearfix
+									.row
+										.col-xs-12.col-md-6.col-md-push-6
+											.blog_box_img(style='background-image: url(' + require('./components/images/blog-bg-2.jpg') + ')')
+										.col-xs-12.col-md-6.col-md-pull-6
+											.blog_box_data.clearfix
+												.day 18
+												span
+													.month december 2017
+													p Lorem ipsum dolor sit
+											p.blog_box_text.
+												Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phacommodo pellentesque tincidunt. 
+											a(href="#").read-more Read more		
+				section.seo-text.clearfix
+					p.
+						Phasellus aliquam nisi vitae turpis vehicula, eget tempor turpis varius. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus porttitor dignissim facilisis. Quisque vitae eros eget leo facilisis ultricies quis nec elit. Mauris fermentum orci nulla. Integer mattis, tortor non facilisis vestibulum, odio eros scelerisque turpis, et dictum sapien augue ut tellus. Curabitur feugiat tellus vitae elit varius dapibus. Morbi in augue ipsum. Fusce ut diam metus. Proin nisi sapien, pharetra eget nulla non, mattis pharetra nulla. Donec feugiat nunc non sem lobortis, lacinia suscipit felis ultrices. Etiam sed eleifend ante. Aliquam erat volutpat...
+					a(href="#").read-more Читать еще
+		include ./templates/footer
+		include ./templates/buy-oneclick
+		include ./templates/success

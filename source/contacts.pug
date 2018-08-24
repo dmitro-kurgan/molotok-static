@@ -1,0 +1,83 @@
+extends ./templates/base
+
+block title
+	title Contacts
+
+block main
+	include ./templates/header 
+	section.breadcrumb
+		.container_content
+			ul.clearfix
+				li
+					a(href='./') Главная
+				li
+					a(href='company.html') Контакты
+	.content.content--contacts
+		section.contacts
+			.container_content
+				.row
+					.col-sm-6
+						.contacts_left
+							h2 Контакная информация
+							p.
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eget dui elementum, accumsan nisl ac, consectetur tellus. Suspendisse consequat orci id dui dictum, id egestas justo consequat. Phasellus tellus urna, eleifend quis arcu eu, ultricies mattis.
+							.contacts_socials
+								p Мы в социальных сетях
+								ul
+									li
+										a(href="#").fa.fa-facebook
+									li
+										a(href="#").fa.fa-twitter
+									li
+										a(href="#").fa.fa-instagram
+									li
+										a(href="#").fa.fa-youtube-play
+							.contacts_address
+								ul
+									li
+										span.fa.fa-map-marker
+										p.
+											Харьков, пр. Московский, 247 , Ул. Победителей, 6 а (Холодная гора)
+									li
+										span.fa.fa-phone
+										p
+											| ТЕЛЕФОН: 
+											a(href="+380686313415")
+												| (068) 631-34-15
+											a(href="+380635508840")
+												| (063) 550 88 40
+											a(href="+380505322868")
+												| (050) 532-28-68
+									li
+										span.fa.fa-envelope
+										p
+											| E-MAIL: 
+											a(href="mailto:info@fenixcentr.com.ua")
+												| info@fenixcentr.com.ua
+									li
+										span.fa.fa-clock-o
+										p.
+											График работы: Пн-Пт: 9:00-18:00  Сб: 9:00-14:00
+					.col-sm-6
+						.contacts_right
+							h2 Свяжитесь с нами
+							form
+								.row
+									.form-group.col-sm-6
+										label(for='name') Ваше имя
+										input.form-control#name(type='text', name='name', placeholder='Введите ваше имя', required)
+									.form-group.col-sm-6
+										label(for='email') E-mail
+										input.form-control#email(type='text', name='email', placeholder='E-mail', required)
+								.form-group
+										label(for='tel') Телефон
+										input.form-control#tel(type='text', name='tel', placeholder='Телефон', required)
+								.form-group
+									label(for='message') Сообщение
+									textarea.form-control#message(type='text', name='name', placeholder='Введите ваше сообщение...', rows='5', required)
+								button(type='submit').btn.turq-btn Отправить сообщение
+			section.map
+				.map_block#map
+	include ./templates/footer
+	include ./templates/buy-oneclick
+	include ./templates/success

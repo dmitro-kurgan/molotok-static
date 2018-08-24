@@ -1,0 +1,532 @@
+extends ./templates/base
+
+block title
+	title Category
+
+block main
+	include ./templates/header 
+	section.breadcrumb
+		.container_content
+			ul.clearfix
+				li
+					a(href='./') Главная
+				li
+					a(href='category.html') Каталог товаров
+	.content.category
+		.container_content
+			section.category_block
+				.row
+					.col-xs-12.col-sm-9.col-sm-push-3
+						.category_right
+							h2 Общестроительные материалы
+							.category_nav
+								ul.nav.nav-pills
+									li.active
+										a(data-toggle='pill', href='#tab1') Все общестроительные материалы
+									li
+										a(data-toggle='pill', href='#tab2') Кирпич/ стеновые блоки
+									li
+										a(data-toggle='pill', href='#tab3') Сетка металлическая
+									li
+										a(data-toggle='pill', href='#tab4') Трубы асбестоцементные
+									li
+										a(data-toggle='pill', href='#tab5') Цемент
+									li
+										a(data-toggle='pill', href='#tab6') Магнезитовая плита
+									li
+										a(data-toggle='pill', href='#tab7') Керамзит,песок, щебень
+									li
+										a(data-toggle='pill', href='#tab8') Известь и мел
+							.category_search-bar.clearfix
+								form
+									.form-group
+										select.selectpicker.custom-picker(title='сортировать по', required)
+											option Названию
+											option Цене
+											option Популярности
+									.category_search-bar_results
+										p
+											| найдено 
+											span 300 
+											| результатов
+							.category_tab-content
+								.tab-content
+									#tab1.tab-pane.fade.in.active
+										mixin goods(sticker, stickername, pic, name, text, price, saleclass, saleprice)
+											div.col-sm-4
+												a(href="product-pg.html").buy-it_box
+													.buy-it_box_main
+														.buy-it_box_top
+															div(class='' + sticker)= stickername
+														.buy-it_box_img(style='background-image: url(' + require('./components/images/' + pic) + ')')
+													.buy-it_box_bottom
+														.buy-it_box_name
+															p= name
+														.buy-it_box_price
+															p(class='buy-it_box_cost')= price
+															p(class='' + saleclass)= saleprice
+														.buy-it_box_text.tip
+															p= text
+												.buy-it_panel.clearfix
+													ul
+														li
+															span
+																a(href="#")
+																.description
+																	p В сравнение
+														li
+															span
+																a(href="#")
+																.description.one-click
+																	p Купить в один клик
+														li
+															a(href="#") купить
+										+goods('sticker sticker-new','New','ceresit-pic-2.jpg','Клей для плитки ceresit CM-11 (25 кг)', 'Клей для тонкослойного крепления керамических плиток при внутренних и наружных работах', '60.00 грн', 'buy-it_box_sale', '90.00 грн')
+										+goods('','','1-br-aquamast.jpg','AQUAMAST МАСТИКА БИТУМНО-РЕЗИНОВАЯ (10КГ)', 'Холодная гидроизоляционная мастика на основе битума и дробленой резины. Для устройства кровельного покрытия.', '359 грн', '', '')
+										+goods('sticker sticker-new','New','Evroruberojd-HKP-768x1024.png','ОРЕОЛ-1 ЕВРОРУБЕРОИД ХПП 2,0 (15М2)', 'Битумно-полимерный материал для гидроизоляции класса Эконом. Для нижнего слоя мягкой кровли и гидроизоляции зданий', '380 грн.', 'buy-it_box_sale', '410 грн')
+
+										+goods('sticker sticker-new','New','Stark_deltashlif_FS_110.png','ДЕЛЬТАШЛИФМАШИНА ВИБРАЦИОННАЯ STARK FS 110', 'Дельташлифмашина для шлифования древесины, пластмассы, металла, композиционных материалов. Может применяться для полировки поверхности мебели, если использовать мягкую ткань вместо наждачной бумаги.', '537 грн', 'buy-it_box_sale', '581 грн')
+										+goods('','','Elektrodrel-ID500new.png','ДРЕЛЬ БЕЗУДАРНАЯ STARK ID 500', 'Электродрель, предназначенная для сверления отверстий в древесине, металле и бетоне. Может использоваться как шуруповерт для завинчивания шурупов и нарезания резьбы.', '726 грн', 'buy-it_box_sale', '785.00 грн')
+										+goods('sticker sticker-new','New','1-mira3100-150x150.jpg','КЛЕЙ ДЛЯ ПЛИТКИ ЭЛАСТИЧНЫЙ MIRA 3100 UNIFIХ (СЕРЫЙ) 25 КГ', 'Клей для плитки Mira 3100 standardfix для облицовки керамической плиткой стен и полов внутри и снаружи помещений. Высокая степень адгезии', '260 грн', '', '')
+
+										+goods('','','1-br-aquamast.jpg','AQUAMAST МАСТИКА БИТУМНО-РЕЗИНОВАЯ (10КГ)', 'Холодная гидроизоляционная мастика на основе битума и дробленой резины. Для устройства кровельного покрытия.', '359 грн', '', '')
+										+goods('sticker sticker-new','New','Evroruberojd-HKP-768x1024.png','ОРЕОЛ-1 ЕВРОРУБЕРОИД ХПП 2,0 (15М2)', 'Битумно-полимерный материал для гидроизоляции класса Эконом. Для нижнего слоя мягкой кровли и гидроизоляции зданий', '380 грн.', 'buy-it_box_sale', '410 грн')
+										+goods('','','P25_L.jpg','ПОЛИМИН П-24 ЭЛАСТ-КЛЕЙ 25КГ', 'ПОЛИМИН П-24 эласт-клей  (для балконов и полов с электро и водным обогревом)', '259 грн', '', '')
+										
+										+goods('','','1-osb-qsbosb-12-mm-1250-2500-krono-ukraina.jpg','OSB (ХАРЬКОВ) 2500*1250*10ММ', 'Ориентированно-стружечная плита (ОСП) — это многослойный (3-4 слоя) лист из древесной стружки, склеенной различными смолами с добавлением синтетического воска и борной кислоты.', '300 грн', '', '')
+										+goods('sticker sticker-new','New','ode.jpg','УТЕПЛИТЕЛЬ ODE ФОЛЬГИРОВАННЫЙ 50*1200*1000 12М2', 'Тепло- звукоизоляционный материал минерального происхождения Knauf Insulation 18м2', '475 грн', '', '')
+										+goods('','','Elektrodrel-ID500new.png','ДРЕЛЬ БЕЗУДАРНАЯ STARK ID 500', 'Электродрель, предназначенная для сверления отверстий в древесине, металле и бетоне. Может использоваться как шуруповерт для завинчивания шурупов и нарезания резьбы.', '726 грн', 'buy-it_box_sale', '785.00 грн')
+							.category_pagination
+								.pagination-block
+									.pagination.loop-pagination
+										//- a.prev.page-numbers(href='#')
+										a.page-numbers(href='#') 1
+										span.page-numbers.current 2
+										a.page-numbers(href='#') 3
+										span.page-numbers.dots …
+										a.page-numbers(href='#') 10
+										a.next.page-numbers(href='#') Следующая
+					.col-xs-12.col-sm-3.col-sm-pull-9
+						.category_left
+							form
+								.categort_search
+									.form-group
+										button.fa.fa-search(type='submit')
+										input.form-control(type='text', name='search', placeholder='Поиск...')
+								.category_country
+									h3 Страна производитель
+									.category_country_block
+										.checkbox
+											label(for='country1')
+												input(type='checkbox', name='country', value='', checked)#country1
+												.checkbox_ok
+												| Австрия
+												span.checkbox_quantity 2
+										.checkbox
+											label(for='country2')
+												input(type='checkbox', name='country', value='')#country2
+												.checkbox_ok
+												| Австрия
+												span.checkbox_quantity 7
+										.checkbox
+											label(for='country3')
+												input(type='checkbox', name='country', value='')#country3
+												.checkbox_ok
+												| Австрия
+												span.checkbox_quantity 577
+										.checkbox
+											label(for='country4')
+												input(type='checkbox', name='country', value='')#country4
+												.checkbox_ok
+												| Австрия
+												span.checkbox_quantity 900
+								.category_production
+									h3 Производитель
+									.category_country_block
+										.checkbox
+											label(for='production1')
+												input(type='checkbox', name='production', value='')#production1
+												.checkbox_ok
+												| Mastertool
+												span.checkbox_quantity 2
+										.checkbox
+											label(for='production2')
+												input(type='checkbox', name='production', value='')#production2
+												.checkbox_ok
+												| Sigma
+												span.checkbox_quantity 7
+										.checkbox
+											label(for='production3')
+												input(type='checkbox', name='production', value='')#production3
+												.checkbox_ok
+												| Mastertool
+												span.checkbox_quantity 2600
+										.checkbox
+											label(for='production4')
+												input(type='checkbox', name='production', value='')#production4
+												.checkbox_ok
+												| Sigma
+												span.checkbox_quantity 754
+									a(href="#").load-more Показать все 15
+								.category_production
+									h3 Производитель
+									.category_production_block
+										.scrollbar-inner
+											.checkbox
+												label(for='production5')
+													input(type='checkbox', name='production', value='')#production5
+													.checkbox_ok
+													| Mastertool
+													span.checkbox_quantity 2
+											.checkbox
+												label(for='production6')
+													input(type='checkbox', name='production', value='')#production6
+													.checkbox_ok
+													| Sigma
+													span.checkbox_quantity 7
+											.checkbox
+												label(for='production7') 
+													input(type='checkbox', name='production', value='')#production7
+													.checkbox_ok
+													| Mastertool
+													span.checkbox_quantity 577
+											.checkbox
+												label(for='production8')
+													input(type='checkbox', name='production', value='')#production8
+													.checkbox_ok
+													| Sigma
+													span.checkbox_quantity 900
+											.checkbox
+												label(for='production9')
+													input(type='checkbox', name='production', value='')#production9
+													.checkbox_ok
+													| Sigma
+													span.checkbox_quantity 577
+											.checkbox
+												label(for='production10')
+													input(type='checkbox', name='production', value='')#production10
+													.checkbox_ok
+													| Sigma
+													span.checkbox_quantity 900
+											.checkbox
+												label(for='production11')
+													input(type='checkbox', name='production', value='')#production11
+													.checkbox_ok
+													| Sigma
+													span.checkbox_quantity 577
+											.checkbox
+												label(for='production12')
+													input(type='checkbox', name='production', value='')#production12
+													.checkbox_ok
+													| Sigma
+													span.checkbox_quantity 900
+											.checkbox
+												label(for='production13')
+													input(type='checkbox', name='production', value='')#production13
+													.checkbox_ok
+													| Sigma
+													span.checkbox_quantity 577
+											.checkbox
+												label(for='production14')
+													input(type='checkbox', name='production', value='')#production14
+													.checkbox_ok
+													| Sigma
+													span.checkbox_quantity 900
+								.category_price
+									h3 Цена
+									.category_price_block
+										form
+											.form-group
+												label Диапазон цен, грн.:
+												input.form-control#price(name='price')
+												#slider-range
+								.category_goods
+									h3 Категории товара
+									.category_goods_block
+										#accordion.panel-group
+											#3rdlevel.panel.panel-default
+												.panel-heading
+													h4.panel-title
+														a(data-toggle='collapse', data-parent='#accordion', href='#collapse1', aria-expanded="true").
+															Акции
+												#collapse1.panel-collapse.collapse.in
+													.panel-body
+														ul
+															li.category_3rdlevel
+																.panel-heading
+																	a(data-toggle='collapse', data-parent='#3rdlevel', href='#3rdlevel1', aria-expanded="false") Все полиматериалы
+																#3rdlevel1.panel-collapse.collapse
+																	.panel-body
+																		ul
+																			li
+																				a(href="#") OSB/QSB
+																			li
+																				a(href="#") Брус
+																			li
+																				a(href="#") ДВП/ДСП
+															li
+																a(href="#") OSB/QSB
+															li
+																a(href="#") Брус
+															li
+																a(href="#") ДВП/ДСП
+											.panel.panel-default
+												.panel-heading
+													h4.panel-title
+														a(data-toggle='collapse', data-parent='#accordion', href='#collapse2', aria-expanded="false").
+															Общестроительные материалы
+												#collapse2.panel-collapse.collapse
+													.panel-body
+														ul
+															li
+																a(href="#") Все полиматериалы
+															li
+																a(href="#") OSB/QSB
+															li
+																a(href="#") Брус
+															li
+																a(href="#") ДВП/ДСП
+											.panel.panel-default
+												.panel-heading
+													h4.panel-title
+														a(data-toggle='collapse', data-parent='#accordion', href='#collapse3', aria-expanded="false").
+															Отделочные материалы
+												#collapse3.panel-collapse.collapse
+													.panel-body
+														ul
+															li
+																a(href="#") Все полиматериалы
+															li
+																a(href="#") OSB/QSB
+															li
+																a(href="#") Брус
+															li
+																a(href="#") ДВП/ДСП
+											.panel.panel-default
+												.panel-heading
+													h4.panel-title
+														a(data-toggle='collapse', data-parent='#accordion', href='#collapse4', aria-expanded="false").
+															Сухие смеси
+												#collapse4.panel-collapse.collapse
+													.panel-body
+														ul
+															li
+																a(href="#") Все полиматериалы
+															li
+																a(href="#") OSB/QSB
+															li
+																a(href="#") Брус
+															li
+																a(href="#") ДВП/ДСП
+											.panel.panel-default
+												.panel-heading
+													h4.panel-title
+														a(data-toggle='collapse', data-parent='#accordion', href='#collapse5', aria-expanded="false").
+															Тепло-звукоизоляция
+												#collapse5.panel-collapse.collapse
+													.panel-body
+														ul
+															li
+																a(href="#") Все полиматериалы
+															li
+																a(href="#") OSB/QSB
+															li
+																a(href="#") Брус
+															li
+																a(href="#") ДВП/ДСП
+											.panel.panel-default
+												.panel-heading
+													h4.panel-title
+														a(data-toggle='collapse', data-parent='#accordion', href='#collapse6', aria-expanded="false").
+															Пиломатериалы
+												#collapse6.panel-collapse.collapse
+													.panel-body
+														ul
+															li
+																a(href="#") Все полиматериалы
+															li
+																a(href="#") OSB/QSB
+															li
+																a(href="#") Брус
+															li
+																a(href="#") ДВП/ДСП
+											.panel.panel-default
+												.panel-heading
+													h4.panel-title
+														a(data-toggle='collapse', data-parent='#accordion', href='#collapse7', aria-expanded="false").
+															Лакокрасочные материалы
+												#collapse7.panel-collapse.collapse
+													.panel-body
+														ul
+															li
+																a(href="#") Все полиматериалы
+															li
+																a(href="#") OSB/QSB
+															li
+																a(href="#") Брус
+															li
+																a(href="#") ДВП/ДСП
+											.panel.panel-default
+												.panel-heading
+													h4.panel-title
+														a(data-toggle='collapse', data-parent='#accordion', href='#collapse8', aria-expanded="false").
+															Двери
+												#collapse8.panel-collapse.collapse
+													.panel-body
+														ul
+															li
+																a(href="#") Все полиматериалы
+															li
+																a(href="#") OSB/QSB
+															li
+																a(href="#") Брус
+															li
+																a(href="#") ДВП/ДСП
+											.panel.panel-default
+												.panel-heading
+													h4.panel-title
+														a(data-toggle='collapse', data-parent='#accordion', href='#collapse9', aria-expanded="false").
+															Инструменты
+												#collapse9.panel-collapse.collapse
+													.panel-body
+														ul
+															li
+																a(href="#") Все полиматериалы
+															li
+																a(href="#") OSB/QSB
+															li
+																a(href="#") Брус
+															li
+																a(href="#") ДВП/ДСП
+											.panel.panel-default
+												.panel-heading
+													h4.panel-title
+														a(data-toggle='collapse', data-parent='#accordion', href='#collapse10', aria-expanded="false").
+															Электроинструмент
+												#collapse10.panel-collapse.collapse
+													.panel-body
+														ul
+															li
+																a(href="#") Все полиматериалы
+															li
+																a(href="#") OSB/QSB
+															li
+																a(href="#") Брус
+															li
+																a(href="#") ДВП/ДСП
+											.panel.panel-default
+												.panel-heading
+													h4.panel-title
+														a(data-toggle='collapse', data-parent='#accordion', href='#collapse11', aria-expanded="false").
+															Напольные покрытия
+												#collapse11.panel-collapse.collapse
+													.panel-body
+														ul
+															li
+																a(href="#") Все полиматериалы
+															li
+																a(href="#") OSB/QSB
+															li
+																a(href="#") Брус
+															li
+																a(href="#") ДВП/ДСП
+											.panel.panel-default
+												.panel-heading
+													h4.panel-title
+														a(data-toggle='collapse', data-parent='#accordion', href='#collapse12', aria-expanded="false").
+															Кровля
+												#collapse12.panel-collapse.collapse
+													.panel-body
+														ul
+															li
+																a(href="#") Все полиматериалы
+															li
+																a(href="#") OSB/QSB
+															li
+																a(href="#") Брус
+															li
+																a(href="#") ДВП/ДСП
+											.panel.panel-default
+												.panel-heading
+													h4.panel-title
+														a(data-toggle='collapse', data-parent='#accordion', href='#collapse13', aria-expanded="false").
+															Сайдинг/Софит
+												#collapse13.panel-collapse.collapse
+													.panel-body
+														ul
+															li
+																a(href="#") Все полиматериалы
+															li
+																a(href="#") OSB/QSB
+															li
+																a(href="#") Брус
+															li
+																a(href="#") ДВП/ДСП
+											.panel.panel-default
+												.panel-heading
+													h4.panel-title
+														a(data-toggle='collapse', data-parent='#accordion', href='#collapse14', aria-expanded="false").
+															Строительная химия
+												#collapse14.panel-collapse.collapse
+													.panel-body
+														ul
+															li
+																a(href="#") Все полиматериалы
+															li
+																a(href="#") OSB/QSB
+															li
+																a(href="#") Брус
+															li
+																a(href="#") ДВП/ДСП
+											.panel.panel-default
+												.panel-heading
+													h4.panel-title
+														a(data-toggle='collapse', data-parent='#accordion', href='#collapse15', aria-expanded="false").
+															Электротовары
+												#collapse15.panel-collapse.collapse
+													.panel-body
+														ul
+															li
+																a(href="#") Все полиматериалы
+															li
+																a(href="#") OSB/QSB
+															li
+																a(href="#") Брус
+															li
+																a(href="#") ДВП/ДСП
+											.panel.panel-default
+												.panel-heading
+													h4.panel-title
+														a(data-toggle='collapse', data-parent='#accordion', href='#collapse16', aria-expanded="false").
+															Сантехника
+												#collapse16.panel-collapse.collapse
+													.panel-body
+														ul
+															li
+																a(href="#") Все полиматериалы
+															li
+																a(href="#") OSB/QSB
+															li
+																a(href="#") Брус
+															li
+																a(href="#") ДВП/ДСП
+								button(type='submit').btn Фильтровать
+							a(href="#").category_adv
+								.category_adv_txt
+									p
+										| Sale 
+										span 50% 
+										| Off
+								.category_adv_img
+									img(src=require("./components/images/pic-10.png"), alt="")
+								.category_adv_buy-now
+									p.
+										купить сейчас
+						
+			section.seo-text
+				p.
+					Phasellus aliquam nisi vitae turpis vehicula, eget tempor turpis varius. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus porttitor dignissim facilisis. Quisque vitae eros eget leo facilisis ultricies quis nec elit. Mauris fermentum orci nulla. Integer mattis, tortor non facilisis vestibulum, odio eros scelerisque turpis, et dictum sapien augue ut tellus. Curabitur feugiat tellus vitae elit varius dapibus. Morbi in augue ipsum. Fusce ut diam metus. Proin nisi sapien, pharetra eget nulla non, mattis pharetra nulla. Donec feugiat nunc non sem lobortis, lacinia suscipit felis ultrices. Etiam sed eleifend ante. Aliquam erat volutpat...
+				a(href="#").read-more Читать еще
+	include ./templates/footer
+	include ./templates/buy-oneclick
+	include ./templates/success

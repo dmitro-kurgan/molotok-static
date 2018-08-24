@@ -1,0 +1,155 @@
+extends ./templates/base
+
+block title
+	title Blog
+block main
+	include ./templates/header 
+	section.breadcrumb
+		.container_content
+			ul.clearfix
+				li
+					a(href='./') Главная
+				li
+					a(href='blog.html') Блог
+	.content.content--blog
+		.container_content
+			section.news-banner
+				h2 Новости
+				.news-banner_img(style='background-image: url(' + require('./components/images/news-background.jpg') + ')')
+					.row
+						.col-sm-6
+							.news-banner_left
+								h1.
+									Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+								p.
+									Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eget dui elementum, accumsan nisl ac, consectetur tellus. Suspendisse consequat orci id dui dictum, id egestas justo consequat.
+								a(href="#").btn.turq-btn Читать подробнее
+						.col-sm-6
+							.news-banner_right
+			section.news
+				#data-container
+					.data-item
+						.row
+							.col-md-4.col-sm-6
+								a(href="article.html").news_box
+									.news_box_img(style='background-image:url(' + require('./components/images/news-photo-1.jpg') + ')')
+									.news_box_data.clearfix
+										.day 18
+										span
+											.month december 2017
+											p Lorem ipsum dolor sit
+									p.news_box_text.
+										Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus commodo pellentesque tincidunt. Pellentesque at consectetur.
+									object(data="", type="")
+										a(href="#").read-more Read more
+							.col-md-4.col-sm-6
+								a(href="article.html").news_box
+									.news_box_img(style='background-image:url(' + require('./components/images/news-photo-2.jpg') + ')')
+									.news_box_data.clearfix
+										.day 18
+										span
+											.month december 2017
+											p Lorem ipsum dolor sit
+									p.news_box_text.
+										Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus commodo pellentesque tincidunt. Pellentesque at consectetur.
+									object(data="", type="")
+										a(href="#").read-more Read more
+							.col-md-4.col-sm-6
+								a(href="article.html").news_box
+									.news_box_img(style='background-image:url(' + require('./components/images/news-photo-3.jpg') + ')')
+									.news_box_data.clearfix
+										.day 18
+										span
+											.month december 2017
+											p Lorem ipsum dolor sit
+									p.news_box_text.
+										Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus commodo pellentesque tincidunt. Pellentesque at consectetur.
+									object(data="", type="")
+										a(href="#").read-more Read more
+							.col-md-4.col-sm-6
+								a(href="article.html").news_box
+									.news_box_img(style='background-image:url(' + require('./components/images/news-photo-4.jpg') + ')')
+									.news_box_data.clearfix
+										.day 18
+										span
+											.month december 2017
+											p Lorem ipsum dolor sit
+									p.news_box_text.
+										Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus commodo pellentesque tincidunt. Pellentesque at consectetur.
+									object(data="", type="")
+										a(href="#").read-more Read more
+							.col-md-4.col-sm-6
+								a(href="article.html").news_box
+									.news_box_img(style='background-image:url(' + require('./components/images/news-photo-5.jpg') + ')')
+									.news_box_data.clearfix
+										.day 18
+										span
+											.month december 2017
+											p Lorem ipsum dolor sit
+									p.news_box_text.
+										Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus commodo pellentesque tincidunt. Pellentesque at consectetur.
+									object(data="", type="")
+										a(href="#").read-more Read more
+							.col-md-4.col-sm-6
+								a(href="article.html").news_box
+									.news_box_img(style='background-image:url(' + require('./components/images/blog-bg-1.jpg') + ')')
+									.news_box_data.clearfix
+										.day 18
+										span
+											.month december 2017
+											p Lorem ipsum dolor sit
+									p.news_box_text.
+										Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus commodo pellentesque tincidunt. Pellentesque at consectetur.
+									object(data="", type="")
+										a(href="#").read-more Read more
+				#loading-div
+				.btn.turq-btn.button-more#button-more(onclick='lazyload.load()') Показать еще	
+	include ./templates/footer
+	include ./templates/buy-oneclick
+	include ./templates/success
+	script(src='https://code.jquery.com/jquery-3.2.1.min.js')
+	script.
+		var lazyload = lazyload || {};
+		(function($, lazyload) {
+
+		    "use strict";
+
+		    var page = 2,
+		        buttonId = "#button-more",
+		        loadingId = "#loading-div",
+		        container = "#data-container";
+
+		    lazyload.load = function() {
+
+		        var url = "./" + page + ".html";
+
+		        $(buttonId).hide();
+		        $(loadingId).show();
+
+		        $.ajax({
+		            url: url,
+		            success: function(response) {
+		                if (!response || response.trim() == "NONE") {
+		                    $(buttonId).show();
+		                    // $(loadingId).text("No more entries to load!");
+		                    return;
+		                }
+		                appendContests(response);
+		            },
+		            error: function(response) {
+		                $(loadingId).text("Sorry, there was some error with the request. Please refresh the page.");
+		            }
+		        });
+		    };
+
+		    var appendContests = function(response) {
+		        var id = $(buttonId);
+
+		        $(buttonId).show();
+		        $(loadingId).hide();
+
+		        $(response).appendTo($(container));
+		        page += 1;
+		    };
+
+		})(jQuery, lazyload);
